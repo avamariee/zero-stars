@@ -3,7 +3,7 @@ import React from 'react';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; */
 
-/* import Navbar from './components/Navbar'; */
+import Navbar from './components/Navbar';
 
 /* const client = new ApolloClient({
   request: operation => {
