@@ -29,16 +29,6 @@ function App() {
       </Router>
     </ApolloProvider>
 
-    /*     <ApolloProvider client={client}>
-          <Router>
-            <>
-              <Nav />
-              <Switch>
-                <Route />
-              </Switch>
-            </>
-          </Router>
-        </ApolloProvider> */
   );
 }
 
