@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { BrowserRouter as Router/* , Switch, Route */ } from 'react-router-dom';
 
 import AppNav from './components/Navbar';
+import '././styles.css'
 
 const client = new ApolloClient({
   request: operation => {
