@@ -6,13 +6,13 @@ import SignUp from '../SignUp';
 import Login from '../Login';
 import Auth from '../../utils/auth';
 
-const AppNavbar = () => {
+const AppNav = () => {
     // set modal display state
     const [showModal, setShowModal] = useState(false);
 
     return (
         <>
-            <Navbar bg='dark' variant='dark' expand='lg'>
+            <Navbar>
                 <Container fluid>
                     <Navbar.Brand as={Link} to='/'>
                         Zero Stars
@@ -74,4 +74,4 @@ const AppNavbar = () => {
     );
 };
 
-export default AppNavbar;
+export default AppNav;

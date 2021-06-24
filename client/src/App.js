@@ -1,11 +1,11 @@
 import React from 'react';
-/* import ApolloClient from 'apollo-boost';
+import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; */
+import { BrowserRouter as Router/* , Switch, Route */ } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
+import AppNav from './components/Navbar';
 
-/* const client = new ApolloClient({
+const client = new ApolloClient({
   request: operation => {
     const token = localStorage.getItem('id_token');
 
@@ -16,25 +16,29 @@ import Navbar from './components/Navbar';
     });
   },
   uri: '/graphql'
-}); */
+});
 
 function App() {
   return (
 
-    <div>
-{/*       <Navbar /> */}
-      Test
-    </div>
-/*     <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
       <Router>
         <>
-          <Nav />
-          <Switch>
-            <Route />
-          </Switch>
+          <AppNav />
         </>
       </Router>
-    </ApolloProvider> */
+    </ApolloProvider>
+
+    /*     <ApolloProvider client={client}>
+          <Router>
+            <>
+              <Nav />
+              <Switch>
+                <Route />
+              </Switch>
+            </>
+          </Router>
+        </ApolloProvider> */
   );
 }
 
