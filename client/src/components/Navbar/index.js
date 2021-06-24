@@ -12,7 +12,7 @@ const AppNav = () => {
 
     return (
         <>
-            <Navbar>
+            <Navbar expand='lg'>
                 <Container fluid>
                     <Navbar.Brand as={Link} to='/'>
                         Zero Stars
