@@ -3,9 +3,9 @@ import React from 'react';
 function Profile() {
   return (
     <div>
-      <div class="columns avatar">
-        <div class="columns is-mobile">
-          <div class="column"><img src="http://placekitten.com/g/200/300"></img></div>
+      <div class="columns is-centered is-mobile avatar">
+        <div class="columns is-half is-mobile">
+          <div class="column"><img src="http://placekitten.com/200/200"></img></div>
         </div>
         <div class="media-content">
           <p class="title">Kitty Cat</p>
@@ -14,8 +14,8 @@ function Profile() {
           </p>
           <p class="subtitle">
             Gender: <span id="gender">Female</span> <br></br>
-            Birthday: <span id="date">06/24/2021</span> <br></br>
-            --------------------
+            Birthday: <span id="birthdate">06/24/2021</span> <br></br>
+            
           </p>
           <div class="columns is-mobile">
             <div class="column">
@@ -38,7 +38,7 @@ function Profile() {
               <h2 class="title">
                 Posts/Comments
               </h2>
-              
+
               <article>
                 <div class="post">
                   <a href="/"></a>
@@ -50,9 +50,9 @@ function Profile() {
 
                 </div>
                 <div class="post-user">
-                  By User on
-                  date
-                  
+                  By <span id="user">User</span> on 
+                  <span id="date"> date</span>
+
                 </div>
               </article>
             </div>
@@ -63,6 +63,13 @@ function Profile() {
               <h2 class="title">
                 Extra? Friends List
               </h2>
+              <ol>
+                <li>Luisianna</li>
+                <li>Ava</li>
+                <li>Janell</li>
+                <li>Tess</li>
+                <li>Landon</li>
+              </ol>
             </div>
           </div>
         </div>

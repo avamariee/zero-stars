@@ -1,6 +1,7 @@
 /* ava's css */
 
 /* #4D9F8D
+/* rgba(77, 159, 141, 1) ^^
 /* #EFEA5A
 /* #EBEBEB */
 
@@ -14,14 +15,25 @@ body {
 
 
 .avatar {
-    margin-left: 25px;
+    margin-left:300px;
     margin-top : 20px;
-    /* background-color: #4D9F8D; */
+    margin-right: 300px;
+    background-color: rgba(77, 159, 141, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
 
+}
+
+.title {
+    color: #EFEA5A;
 }
 
 .avatar img {
     margin: 1em;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    box-shadow: 10px 10px 5px #408677;
 }
 
 .media-content {
@@ -30,7 +42,12 @@ body {
 }
 
 ol {
-    margin-left: 15px;
+    margin-left: 25px;
+    padding-bottom: 10px;
+    font-weight: bolder;
+}
+
+.post-title, #user, #birthdate, #gender {
     font-weight: bolder;
 }
 
