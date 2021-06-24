@@ -1,6 +1,6 @@
 /* ava's css */
 
-/* #AD9F8D
+/* #4D9F8D
 /* #EFEA5A
 /* #EBEBEB */
 
@@ -8,7 +8,30 @@ html {
     background-color: #EBEBEB;
 }
 
+body {
+    font-family: 'Karla', sans-serif;
+}
 
 
+.avatar {
+    margin-left: 25px;
+    margin-top : 20px;
+    /* background-color: #4D9F8D; */
+
+}
+
+.avatar img {
+    margin: 1em;
+}
+
+.media-content {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+ol {
+    margin-left: 15px;
+    font-weight: bolder;
+}
 
 /* ava's css */
