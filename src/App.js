@@ -1,10 +1,13 @@
 import React from 'react';
+import './styles.css';
+import Profile from './components/Profile';
 
 function App() {
   return (
     
     <div>
       <h1>Test</h1>
+      <Profile></Profile>
     </div>
 
   );
