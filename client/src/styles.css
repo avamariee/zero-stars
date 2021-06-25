@@ -87,3 +87,34 @@ html {
 }
 /* tess's css */
 
+/* search result page*/
+.box {
+    margin-left:300px;
+    margin-top : 20px;
+    margin-right: 300px;
+    background-color: rgba(77, 159, 141, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .card {
+    background-color: #EBEBEB;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 30px;
+    /* padding-bottom: 10px; */
+  }
+  
+  /* .content {
+    color: #EFEA5A;
+  } */
+  
+  .title {
+    color:rgba(77, 159, 141, 1)
+  }
+  
+  /* .item-1 {
+    background-image:public/assets/images/pouting-face-emoji-by-google.png ;
+  } */
+
+  /* .Logo {
+    background-image: url(../public/assets/images/AdobeStock_413495797.jpeg);
+  } */
