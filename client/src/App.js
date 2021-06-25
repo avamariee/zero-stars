@@ -29,7 +29,7 @@ function App() {
         <>
           <AppNav />
           <Switch>
-          <Profile></Profile>
+          {/* <Profile></Profile> */}
           </Switch>
         </>
       </Router>

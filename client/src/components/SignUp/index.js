@@ -5,6 +5,16 @@ import Auth from '../../utils/auth';
 import { ADD_USER } from '../../utils/mutations';
 import { useMutation } from '@apollo/react-hooks';
 
+/* const calendar = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  return (
+    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+  );
+};
+
+https://reactdatepicker.com/#example-custom-input */
+
+
 const SignupForm = () => {
 
   // set initial form state
