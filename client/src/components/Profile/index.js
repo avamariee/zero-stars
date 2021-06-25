@@ -10,7 +10,7 @@ function Profile() {
         <div class="media-content">
           <p class="title">Kitty Cat</p>
           <p class="subtitle">
-            Meow meow meow meow, meow meow meow. Meow. Meow meow meow meow.
+            Meow meow meow meow, meow meow meow. Meow. Meow meow meow meow. Meow.
           </p>
           <p class="subtitle">
             Gender: <span id="gender">Female</span> <br></br>
