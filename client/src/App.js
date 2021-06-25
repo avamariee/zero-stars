@@ -2,6 +2,8 @@ import React from 'react';
 import './styles.css';
 import Profile from './components/Profile';
 
+fetch("/Pizza").then(res => res.json())
+.then(resp => (console.log(resp)))
 function App() {
   return (
     
