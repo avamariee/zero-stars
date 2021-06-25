@@ -97,6 +97,46 @@ const SignupForm = () => {
           />
           <Form.Control.Feedback type='invalid'>Required: password!</Form.Control.Feedback>
         </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='birthday'>Birthday</Form.Label>
+          <Form.Control
+            type='birthday'
+            placeholder='Your birthday'
+            name='birthday'
+            onChange={handleInputChange}
+            value={userFormData.birthday}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Required: birthday!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='gender'>Gender</Form.Label>
+          <Form.Control
+            type='gender'
+            placeholder='Your gender'
+            name='gender'
+            onChange={handleInputChange}
+            value={userFormData.gender}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Required: gender!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='picture'>Profile Picture</Form.Label>
+          <Form.Control
+            type='picture'
+            placeholder='Pick an Avatar'
+            name='picture'
+            onChange={handleInputChange}
+            value={userFormData.picture}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Required: Avatar!</Form.Control.Feedback>
+        </Form.Group>
+
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
