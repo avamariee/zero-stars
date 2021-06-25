@@ -22,13 +22,13 @@ function Profile() {
               <h2 class="title">
                 Favorites
               </h2>
-              <ol>
-                <li>Taco Bell</li>
-                <li>Taco Bell</li>
-                <li>Taco Bell</li>
-                <li>Taco Bell</li>
-                <li>Taco Bell</li>
-              </ol>
+              <ul>
+                <a href='/'><li>🍔<span>Taco Bell</span></li></a>
+                <a href='/'><li>🍔<span>Taco Bell</span></li></a>
+                <a href='/'><li>🍔<span>Taco Bell</span></li></a>
+                <a href='/'><li>🍔<span>Taco Bell</span></li></a>
+                <a href='/'><li>🍔<span>Taco Bell</span></li></a>
+              </ul>
             </div>
 
           </div>
