@@ -51,4 +51,16 @@ ol {
     font-weight: bolder;
 }
 
+
+@media screen and (max-width: 768px) {
+    .avatar {
+      width: 100%;
+      margin: auto;
+    }
+    .avatar img {
+        margin: auto;
+        width: auto;
+        height: auto;
+    }
+  }
 /* ava's css */
