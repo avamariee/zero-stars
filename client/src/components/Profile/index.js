@@ -75,10 +75,6 @@ function Profile() {
         </div>
       </div>
     </div>
-
-
-
-
   );
 }
 

@@ -1,17 +1,36 @@
 import React from 'react';
-import './styles.css';
-import Profile from './components/Profile';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from '@apollo/react-hooks';
+import { BrowserRouter as Router/* , Switch, Route */ } from 'react-router-dom';
 
-fetch("/Pizza").then(res => res.json())
-.then(resp => (console.log(resp)))
+import Profile from './components/Profile';
+import AppNav from './components/Navbar';
+import '././styles.css'
+
+const client = new ApolloClient({
+  request: operation => {
+    const token = localStorage.getItem('id_token');
+
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : ''
+      }
+    });
+  },
+  uri: '/graphql'
+});
+
 function App() {
   return (
-    
-    <div>
-      <h1>Navbar Here -----------------------------------------------------------------------------------------------------------------------------------</h1>
-      <Profile></Profile>
-    </div>
 
+    <ApolloProvider client={client}>
+      <Router>
+        <>
+          <AppNav />
+          <Profile></Profile>
+        </>
+      </Router>
+    </ApolloProvider>
   );
 }
 
