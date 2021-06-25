@@ -6,6 +6,7 @@ import { BrowserRouter as Router/* , Switch, Route */ } from 'react-router-dom';
 import Profile from './components/Profile';
 import AppNav from './components/Navbar';
 import '././styles.css'
+import Switch from 'react-bootstrap/esm/Switch';
 
 const client = new ApolloClient({
   request: operation => {
@@ -27,6 +28,9 @@ function App() {
       <Router>
         <>
           <AppNav />
+          <Switch>
+          <Profile></Profile>
+          </Switch>
         </>
       </Router>
     </ApolloProvider>
