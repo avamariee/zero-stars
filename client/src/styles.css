@@ -1,7 +1,89 @@
+/* ava's css */
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+
+.avatar {
+    margin-left:300px;
+    margin-top : 20px;
+    margin-right: 300px;
+    background-color: rgba(77, 159, 141, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+
+}
+
+.title {
+    color: #EFEA5A;
+}
+
+.avatar img {
+    margin: 1em;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    box-shadow: 10px 10px 5px #408677;
+}
+
+.media-content {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+ul {
+    padding-bottom: 10px;
+    font-weight: bolder;
+}
+
+.post-title, #user, #birthdate, #gender {
+    font-weight: bolder;
+}
+
+ a {
+     text-decoration: none;
+     color: #4a4a4a
+ }
+
+
+/* ipad pro */
+@media screen and (max-width: 1024px) {
+    .avatar {
+      width: 100%;
+      margin: auto;
+    }
+    .avatar img {
+        margin: auto;
+        width: auto;
+        height: auto;
+    }
+  }
+
+/* iphone X */
+@media screen and (max-width: 768px) {
+    .avatar {
+      width: 100%;
+      margin: auto;
+    }
+    .avatar img {
+        margin: auto;
+        width: auto;
+        height: auto;
+    }
+  }
+
+/* ava's css */
+
+
+/* tess's css */
 html {
     background-color: #EBEBEB;
 }
 
+
 .navbar {
     background-color: #4D9F8D;
 }
+/* tess's css */
+
