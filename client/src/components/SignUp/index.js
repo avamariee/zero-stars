@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert, Dropdown } from 'react-bootstrap';
 
 import Auth from '../../utils/auth';
 import { ADD_USER } from '../../utils/mutations';
@@ -111,7 +111,7 @@ const SignupForm = () => {
         <Form.Group>
           <Form.Label htmlFor='birthday'>Birthday</Form.Label>
           <Form.Control
-            type='birthday'
+            type='date'
             placeholder='Your birthday'
             name='birthday'
             onChange={handleInputChange}
@@ -135,6 +135,34 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group>
+        <Form.Label htmlFor='picture'>Picture</Form.Label> <br/>
+          <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Gender
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Form.Group>
+        <br/>
+
+        
+        <Form.Group>
+          <Form.Label htmlFor='gender'>Gender</Form.Label>
+          <Form.Control
+            as = "select"
+          />
+          <option>hi</option>
+          <option>hello</option>
+          <option>bye</option>
+          <Form.Control.Feedback type='invalid'>Required: gender!</Form.Control.Feedback>
+        </Form.Group>
+
+        {/*         <Form.Group>
           <Form.Label htmlFor='picture'>Profile Picture</Form.Label>
           <Form.Control
             type='picture'
@@ -145,8 +173,8 @@ const SignupForm = () => {
             required
           />
           <Form.Control.Feedback type='invalid'>Required: Avatar!</Form.Control.Feedback>
-        </Form.Group>
-        
+        </Form.Group> */}
+
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'

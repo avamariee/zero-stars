@@ -1,10 +1,43 @@
+  /////// tess code ////////
+  
+import React, { useState, useEffect } from 'react';
+import maleImage from '../../images/male.png'
+import femaleImage from '../../images/female.png'
+import nonbinaryImage from '../../images/nonbinary.png'
+
+
 
 function Profile() {
+
+  //start with empty string once you have API which will call with what we do want and set the state
+  //switch statement 17, 20, 23
+  const [userGender, setUserGender] = useState('Male');
+  const [profilePhoto, setProfilePhoto] = useState(nonbinaryImage);
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    if (userGender === 'Male') {
+      setProfilePhoto(maleImage)
+    }
+    if (userGender === 'Female') {
+      setProfilePhoto(femaleImage)
+    }
+    if (userGender === 'Nonbinary') {
+      setProfilePhoto(nonbinaryImage)
+    }
+
+  },
+  [userGender]
+
+  );
+
+  /////// tess code ////////
+
   return (
     <div>
       <div class="columns is-centered is-mobile avatar">
         <div class="columns is-half is-mobile">
-          <div class="column"><img src="http://placekitten.com/200/200"></img></div>
+          <div class="column"><img src={profilePhoto}></img></div>
         </div>
         <div class="media-content">
           <p class="title">Kitty Cat</p>
@@ -14,7 +47,7 @@ function Profile() {
           <p class="subtitle">
             Gender: <span id="gender">Female</span> <br></br>
             Birthday: <span id="birthdate">06/24/2021</span> <br></br>
-            
+
           </p>
           <div class="columns is-mobile">
             <div class="column">
@@ -49,7 +82,7 @@ function Profile() {
 
                 </div>
                 <div class="post-user">
-                  By <span id="user">User</span> on 
+                  By <span id="user">User</span> on
                   <span id="date"> date</span>
 
                 </div>
