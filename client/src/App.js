@@ -28,9 +28,7 @@ function App() {
       <Router>
         <>
           <AppNav />
-          <Switch>
-          {/* <Profile></Profile> */}
-          </Switch>
+
         </>
       </Router>
     </ApolloProvider>
