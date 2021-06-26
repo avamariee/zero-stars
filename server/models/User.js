@@ -31,6 +31,8 @@ const userSchema = new Schema({
     }
 });
 
+// add favorites later?
+
 // set up pre-save middleware to create password
 userSchema.pre('save', async function(next) {
     if (this.isNew || this.isModified('password')) {
