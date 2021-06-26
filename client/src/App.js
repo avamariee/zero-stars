@@ -28,7 +28,7 @@ function App() {
       <Router>
         <>
           <AppNav />
-          <Profile></Profile>
+
         </>
       </Router>
     </ApolloProvider>

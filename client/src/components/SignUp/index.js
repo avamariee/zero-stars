@@ -5,15 +5,6 @@ import Auth from '../../utils/auth';
 import { ADD_USER } from '../../utils/mutations';
 import { useMutation } from '@apollo/react-hooks';
 
-/* const calendar = () => {
-  const [startDate, setStartDate] = useState(new Date());
-  return (
-    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-  );
-};
-
-https://reactdatepicker.com/#example-custom-input */
-
 
 const SignupForm = () => {
 
@@ -134,7 +125,7 @@ const SignupForm = () => {
           <Form.Control.Feedback type='invalid'>Required: gender!</Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
+{/*         <Form.Group>
         <Form.Label htmlFor='picture'>Picture</Form.Label> <br/>
           <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -147,7 +138,7 @@ const SignupForm = () => {
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-        </Form.Group>
+        </Form.Group> */}
         <br/>
 
         
