@@ -24,7 +24,7 @@ const resolvers = {
             // is this set up correctly?
 
         },
-        // get all useres
+        // get all users
         users: async () => {
             return User.find()
                 .select('-__v -password')
@@ -56,7 +56,7 @@ const resolvers = {
                 throw new AuthenticationError('Incorrect credentials.');
             }
 
-            const correctPass = await user.isCorrectPassword(password);
+            const correctPass = await User.isCorrectPassword(password);
 
             if (!correctPass) {
                 throw new AuthenticationError('Incorrect credentials');
@@ -68,33 +68,33 @@ const resolvers = {
 
         // favorites list add, unsure if this is correct. will need to revise
 
-        addFavorite: async (parent, args, context) => {
-            if (context.user) {
-                const favorite = await Favorite.create({ ...args, username: context.user.username });
+        // addFavorite: async (parent, args, context) => {
+        //     if (context.user) {
+        //         const favorite = await Favorite.create({ ...args, username: context.user.username });
 
-                await User.findByIdAndUpdate(
-                    { _id: context.user._id },
-                    { $push: { favorites: favorite._id } },
-                    { new: true }
-                )
-                return favorite;
-            }
+        //         await User.findByIdAndUpdate(
+        //             { _id: context.user._id },
+        //             { $push: { favorites: favorite._id } },
+        //             { new: true }
+        //         )
+        //         return favorite;
+        //     }
 
-            throw new AuthenticationError('You need to be logged in!');
-        },
+        //     throw new AuthenticationError('You need to be logged in!');
+        // },
 
-        addFriend: async ( parent, {friendId }, context ) => {
-            if(context.user){
-                const updatedUser = await User.findOneAndUpdate(
-                    {_id: context.user._id },
-                    {$addToSet: { friends: friendId }},
-                    { new: true }
-                )
-                .populate('friends')
-                return updatedUser;
-            }
-            throw new AuthenticationError('You need to be logged in!')
-        }
+        // addFriend: async ( parent, {friendId }, context ) => {
+        //     if(context.user){
+        //         const updatedUser = await User.findOneAndUpdate(
+        //             {_id: context.user._id },
+        //             {$addToSet: { friends: friendId }},
+        //             { new: true }
+        //         )
+        //         .populate('friends')
+        //         return updatedUser;
+        //     }
+        //     throw new AuthenticationError('You need to be logged in!')
+        // }
     }
 };
 

@@ -1,6 +1,7 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
+const fetch = require("node-fetch");
 
 const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
@@ -13,6 +14,59 @@ const server = new ApolloServer({
   resolvers,
   context: authMiddleware
 });
+
+
+// API STUFF HERE?
+
+// 'use strict';
+
+// const yelp = require('yelp-fusion')
+// require('dotenv').config();
+// const YELP_KEY = process.env.YELP_KEY;
+
+
+// const searchRequest = {
+//     term: 'Taco Bell',
+//     location: 'salt lake city, ut'
+// };
+
+// const client = yelp.client(YELP_KEY);
+
+// client.search(searchRequest).then(response => {
+//     const firstResult = response.jsonBody.businesses[0];
+//     const prettyJson = JSON.stringify(firstResult, null, 4);
+//     console.log(prettyJson);
+
+// }).catch(e => {
+//     console.log(e);
+// })
+
+// let getYelp = function () {
+//   let apiUrl = "https://api.yelp.com/v3/search/taco-bell"
+
+//   // make a request to the URL
+//   fetch(apiUrl)
+//     .then(function (response) {
+//       // if the request was successful
+//       if (response.ok) {
+//         console.log(response);
+//         response.json().then(function (data) {
+//           console.log(data);
+
+//         })
+//       } else {
+//         console.log("There was an error: " + response.statusText);
+//       }
+//     })
+//     .catch(function (error) {
+//       console.log("Unable to connect to Yelp.")
+//     })
+// };
+
+// getYelp();
+
+// //////
+
 
 server.applyMiddleware({ app });
 

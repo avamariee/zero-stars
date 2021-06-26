@@ -1,4 +1,5 @@
 const { Schema } = require('mongoose');
+const mongoose = require('mongoose');
 const reviewSchema = require('./Review');
 
 const restaurantSchema = new Schema(
@@ -13,13 +14,13 @@ const restaurantSchema = new Schema(
             required: true
         },
         // tie review to restaurant somehow?
-        reviews: [reviewSchema]
+        // reviews: [reviewSchema]
         
     }
 );
 
 // do we need to include any virtuals for this?
 
-const Restaurant = model('Restaurant', restaurantSchema);
+const Restaurant = mongoose.model('Restaurant', restaurantSchema);
 
 module.exports = Restaurant;

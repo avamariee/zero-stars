@@ -2,11 +2,15 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const favoritesSchema = new Schema ({
+const favoritesSchema = new Schema({
     name: {
         type: String,
         required: true,
         trim: true
+    },
+    favoriteBody: {
+        type: String,
+        required: true,
     }
 });
 

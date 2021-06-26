@@ -9,6 +9,12 @@ type Restaurant {
     reviews: [Review] 
 }
 
+type Favorite {
+    _id: ID
+    name: String
+    favoriteBody: String
+}
+
 type Review {
     _id: ID
     reviewBody: String
@@ -24,8 +30,9 @@ type User {
 type Query {
     me: User
     users: [User]
-    user(username: String!): user
+    user(username: String!): User
     #favorites?
+    favorites(name: String!): Favorite
     #friends?
 }
 
@@ -34,6 +41,8 @@ type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     #add favorite, addFavorite(favoriteBody: String!): Favorite
     #add friend addFriend(friendId: ID!): User
+    addFavorite(favoriteBody: String!): Favorite
+    
 }
 
 type Auth {

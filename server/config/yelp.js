@@ -1,52 +1,73 @@
-const axios = require("axios")
+// const axios = require("axios")
 
+'use strict';
+
+const yelp = require('yelp-fusion')
 require('dotenv').config();
 const YELP_KEY = process.env.YELP_KEY;
 
-let yelpGQL = axios.create({
-    url: "https://api.yelp.com/v3/graphql",
-    headers: {
-        Authorization: `Bearer ${YELP_KEY}`,
-        "Content-type": "application/json",
-    },
-    method: "POST",
+
+const searchRequest = {
+    term: 'Taco Bell',
+    location: 'salt lake city, ut'
+};
+
+const client = yelp.client(YELP_KEY);
+
+client.search(searchRequest).then(response => {
+    const firstResult = response.jsonBody.businesses[0];
+    const prettyJson = JSON.stringify(firstResult, null, 4);
+    console.log(prettyJson);
+
+}).catch(e => {
+    console.log(e);
 })
 
-yelpGQL({
-    data: JSON.stringify({
-        query: `{
-      search(term: "coffee",
-              location: "kyoto",
-              limit: 10) {
-          business {
-              name
-          }
-      }
-  }`,
-    }),
-}).then(({ data }) => {
-    // Double data: data is what Axios puts the response body in, but it's also what GraphQL returns
-    let businesses = data.data.search.business
-    businesses.forEach((b) => {
-        console.log("Name: ", b.name)
-    })
-})
+// REST
+// let yelpREST = axios.create({
+//     baseURL: "https://api.yelp.com/v3/",
+//     headers: {
+//         Authorization: `Bearer ${YELP_KEY}`,
+//         "Content-type": "application/json",
+//     },
+// })
 
-// // Our GQL Helper
-// yelpGQL({
-//     data: JSON.stringify({
-//       query: `{
-//         reviews(business: "9QFiF_YBCKvWsUu50G_yxg") {
-//           total
-//           review {
-//             url
-//             id
-//             rating
-//             text
-//           }
+// // Using the yelpREST helper we defined earlier
+// yelpREST("/businesses/search", {
+//     params: {
+//         location: "kyoto",
+//         term: "coffee",
+//         limit: 10,
+//     },
+// }).then(({ data }) => {
+//     let { businesses } = data
+//     businesses.forEach((b) => {
+//         console.log("Name: ", b.name)
+//     })
+// })
+
+// let getYelp = function(){
+//     let apiUrl = "https://api.yelp.com/v3/"
+
+//     // make a request to the URL
+//     fetch(apiUrl)
+//     .then(function(response){
+//         // if the request was successful
+//         if(response.ok){
+//             console.log(response);
+//             response.json().then(function(data){
+//                 console.log(data);
+
+//             })
+//         } else {
+//             alert("There was an error: " + response.statusText);
 //         }
-//       }`,
-//     }),
-//   }).then(({ data }) => {
-//     console.log(data)
-//   })
+//     })
+//     .catch(function(error){
+//         alert("Unable to connect to Yelp.")
+//     })
+// };
+
+// getYelp();
+
+

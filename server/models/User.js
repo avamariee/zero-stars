@@ -31,7 +31,7 @@ const userSchema = new Schema({
         minlength: 4
     },
     // user can favorite the restaurant with terrible reviews
-    favorites: [favoritesSchema]
+    // favorites: [favoritesSchema]
 });
 
 // add favorites later?
