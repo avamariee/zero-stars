@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
+const favoritesSchema = require('./Favorites');
 
 const bcrypt = require('bcrypt');
 
@@ -28,7 +29,9 @@ const userSchema = new Schema({
         type: String,
         required: true,
         minlength: 4
-    }
+    },
+    // user can favorite the restaurant with terrible reviews
+    favorites: [favoritesSchema]
 });
 
 // add favorites later?

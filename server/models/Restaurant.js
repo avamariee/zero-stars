@@ -1,4 +1,5 @@
 const { Schema } = require('mongoose');
+const reviewSchema = require('./Review');
 
 const restaurantSchema = new Schema(
     {
@@ -11,7 +12,8 @@ const restaurantSchema = new Schema(
             // should this be string or integer???
             required: true
         },
-        // reviews: [reviewsSchema]
+        // tie review to restaurant somehow?
+        review: [reviewSchema]
         
     }
 );
