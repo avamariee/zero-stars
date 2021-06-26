@@ -13,7 +13,7 @@ const restaurantSchema = new Schema(
             required: true
         },
         // tie review to restaurant somehow?
-        review: [reviewSchema]
+        reviews: [reviewSchema]
         
     }
 );
