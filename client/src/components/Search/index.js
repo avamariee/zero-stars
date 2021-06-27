@@ -1,7 +1,14 @@
 import React from 'react';
 import starlogo from '../../zerostars.png';
 
+// import yelp api functionality
+import {useRestaurantSearch} from '../../hooks/yelp-api/useRestaurantSearch';
+
 function Search() {
+
+  // yelp API
+  const [restaurants, amountResults, searchParams, setSearchparams] = useRestaurantSearch()
+
   return (
     <div>
       <div class="container is-fluid">
