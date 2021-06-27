@@ -20,6 +20,28 @@ const client = new ApolloClient({
   uri: '/graphql'
 });
 
+// getters and setters for state for page
+const [currentPage, setCurrentPage] = useState("landing");
+
+// switch case to display each page
+const displayPage = () => {
+  switch (currentPage) {
+
+    case "landing":
+      return <Landing />;
+
+    case "search":
+      return <Search />;
+
+    case "profile":
+      return <Profile />;
+
+    default:
+      return <Landing />
+
+  }
+}
+
 function App() {
   return (
 
@@ -27,7 +49,12 @@ function App() {
       <Router>
         <>
           <AppNav />
-          <Profile></Profile>
+          <div>
+            <main>
+              {/* display page from switch case above */}
+              {displayPage()}
+            </main>
+          </div>
         </>
       </Router>
     </ApolloProvider>
