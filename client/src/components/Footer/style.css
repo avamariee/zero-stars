@@ -1,8 +1,6 @@
-.footer{
+footer{
 position: fixed;
 bottom: 0;
 background-color: #EBEBEB;
-  font-family:'Courier New', Courier, monospace;
-  font-size: large;
-  font-weight: bold;
+text-align: center;
 }

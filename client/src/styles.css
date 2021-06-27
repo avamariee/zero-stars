@@ -112,3 +112,12 @@ html {
 }
 /* tess's css */
 
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #EBEBEB;
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight:normal;
+    text-align: center;
+    }
