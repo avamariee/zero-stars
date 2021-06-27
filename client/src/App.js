@@ -6,6 +6,8 @@ import { BrowserRouter as Router/* , Switch, Route */ } from 'react-router-dom';
 import Profile from './components/Profile';
 import AppNav from './components/Navbar';
 import '././styles.css'
+import Landing from './components/Landing';
+import Footer from './components/Footer';
 
 const client = new ApolloClient({
   request: operation => {
@@ -27,7 +29,8 @@ function App() {
       <Router>
         <>
           <AppNav />
-          <Profile></Profile>
+         <Landing></Landing>
+         <Footer></Footer>
         </>
       </Router>
     </ApolloProvider>
