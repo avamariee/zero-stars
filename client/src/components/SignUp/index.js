@@ -125,10 +125,10 @@ const SignupForm = () => {
           <Form.Control.Feedback type='invalid'>Required: gender!</Form.Control.Feedback>
         </Form.Group>
 
-{/*         <Form.Group>
+{/*         {/*         <Form.Group>
         <Form.Label htmlFor='picture'>Picture</Form.Label> <br/>
           <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
+            <Dropdown.Toggle variant="success" id="dropdown-basic" block>
               Gender
             </Dropdown.Toggle>
 
@@ -138,20 +138,20 @@ const SignupForm = () => {
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-        </Form.Group> */}
-        <br/>
+        </Form.Group> 
+        <br />
 
-        
+{/* 
         <Form.Group>
           <Form.Label htmlFor='gender'>Gender</Form.Label>
           <Form.Control
-            as = "select"
+            as="select"
           />
           <option>hi</option>
           <option>hello</option>
           <option>bye</option>
           <Form.Control.Feedback type='invalid'>Required: gender!</Form.Control.Feedback>
-        </Form.Group>
+        </Form.Group> */}
 
         {/*         <Form.Group>
           <Form.Label htmlFor='picture'>Profile Picture</Form.Label>
@@ -166,10 +166,11 @@ const SignupForm = () => {
           <Form.Control.Feedback type='invalid'>Required: Avatar!</Form.Control.Feedback>
         </Form.Group> */}
 
+
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
-          variant='success'>
+          variant='outline-warning'>
           Submit
         </Button>
       </Form>
