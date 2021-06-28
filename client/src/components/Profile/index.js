@@ -63,46 +63,62 @@ function Profile() {
               </ul>
             </div>
 
+            
           </div>
-          <div class="columns is-mobile">
-            <div class="column">
-
-              <h2 class="title">
-                Posts/Comments
-              </h2>
-
-              <article>
-                <div class="post">
-                  <a href="/"></a>
-                  <span class="post-title">Test Title</span>
-                </div>
-                <div class="post-text">
-
-                  This is the body of the post.
-
-                </div>
-                <div class="post-user">
-                  By <span id="user">User</span> on
-                  <span id="date"> date</span>
-
-                </div>
-              </article>
-            </div>
+        </div>
+        <div className="columns avatar is-mobile">
+          <div className="column favorites">
+            <h2 className="title is-centered">
+              Favorites
+            </h2>
+            <ul>
+              <a href='/'><li>Taco Bell</li></a>
+              <a href='/'><li>Taco Bell</li></a>
+              <a href='/'><li>Taco Bell</li></a>
+              <a href='/'><li>Taco Bell</li></a>
+              <a href='/'><li>Taco Bell</li></a>
+            </ul>
           </div>
 
-          <div class="columns is-mobile">
-            <div class="column">
-              <h2 class="title">
-                Extra? Friends List
-              </h2>
-              <ol>
-                <li>Luisianna</li>
-                <li>Ava</li>
-                <li>Janell</li>
-                <li>Tess</li>
-                <li>Landon</li>
-              </ol>
-            </div>
+        </div>
+        <div className="columns avatar is-mobile">
+          <div className="column comments">
+
+            <h2 className="title">
+              Posts/Comments
+            </h2>
+
+            <article>
+              <div className="post">
+                <a href="/"></a>
+                <span className="post-title">Test Title</span>
+              </div>
+              <div className="post-text">
+
+                This is the body of the post.
+
+              </div>
+              <div className="post-user">
+                By <span id="user"><a href="/">User</a></span> on
+                <span id="date"> date</span>
+
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div className="columns avatar is-mobile">
+          <div className="column friends">
+            <h2 className="title">
+              Extra? Friends List
+            </h2>
+            <ul>
+              <a href='/'><li>Luisianna</li></a>
+              <a href='/'><li>Ava</li></a>
+              <a href='/'><li>Janell</li></a>
+              <a href='/'><li>Tess</li></a>
+              <a href='/'><li>Landon</li></a>
+            </ul>
           </div>
         </div>
       </div>
