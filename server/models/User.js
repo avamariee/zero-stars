@@ -1,16 +1,25 @@
-const mongoose = require('mongoose');
-
-const { Schema } = mongoose;
-const favoritesSchema = require('./Favorites');
-
+const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const favoritesSchema = require('./Favorites');
 
 const userSchema = new Schema({
     username: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        unique: true
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+        match: [/.+@.+\..+/, 'Must use a valid email address'],
+    },
+    password: {
+        type: String,
+        required: true,
+        minlength: 4
     },
     birthday: {
         type: Date,
@@ -19,16 +28,6 @@ const userSchema = new Schema({
     gender: {
         type: String,
         required: true
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        required: true,
-        minlength: 4
     },
     // user can favorite the restaurant with terrible reviews
     // favorites: [favoritesSchema]
@@ -48,7 +47,7 @@ userSchema.pre('save', async function(next) {
   
   // compare the incoming password with the hashed password
   userSchema.methods.isCorrectPassword = async function(password) {
-    return await bcrypt.compare(password, this.password);
+    return bcrypt.compare(password, this.password);
   };
   
   const User = mongoose.model('User', userSchema);
