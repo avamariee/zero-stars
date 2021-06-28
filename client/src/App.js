@@ -12,6 +12,10 @@ import Search from './components/Search'
 
 import '././styles.css'
 
+
+// https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.3999721
+
+
 const client = new ApolloClient({
   request: operation => {
     const token = localStorage.getItem('id_token');
