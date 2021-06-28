@@ -5,6 +5,7 @@ import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import SignUp from '../SignUp';
 import Login from '../Login';
 import Auth from '../../utils/auth';
+import '../../styles.css'
 
 const AppNav = () => {
     // set modal display state
