@@ -3,11 +3,11 @@ const bcrypt = require('bcrypt');
 
 const favoritesSchema = require('./Favorites');
 
-const userSchema = new Schema({
+const userSchema = new Schema(
+    {
     username: {
         type: String,
         required: true,
-        trim: true,
         unique: true
     },
     email: {

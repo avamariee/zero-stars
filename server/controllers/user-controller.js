@@ -1,5 +1,4 @@
 //import
-const { createSourceEventStream } = require('graphql');
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
@@ -17,7 +16,7 @@ module.exports = {
     },
 
     //user creation will be sent to client/src/components/SignUp.js
-    async createSourceEventStream({ body }, res) {
+    async createUser({ body }, res) {
         const user = await User.create(body);
 
         if (!user) {
