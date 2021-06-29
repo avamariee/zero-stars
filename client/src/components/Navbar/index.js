@@ -18,36 +18,36 @@ const AppNav = () => {
 
     return (
         <>
-            <Navbar expand='lg'>
+            <Navbar className="navbarmobile" expand='lg'>
                 <Container fluid>
                     <Navbar.Brand
-                        style={{ color: "#EFEA5A" }}>
-                        Zero Stars!
+                        style={{ color: "#EFEA5A" }} className="main-title">
+                        Zero Stars  <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='navbar' />
                     <Navbar.Collapse id='navbar'>
                         <Nav className='ml-auto'>
-                            <Nav.Link
+                            <Nav.Link className="navbar-title"
                                 style={{ color: "#EFEA5A" }}
                                 as={Link} to='/'>
-                                Search
+                                Search <i class="far fa-star"></i>
                             </Nav.Link>
                             {/* if user is logged in show saved books and logout */}
                             {Auth.loggedIn() ? (
                                 <>
-                                    <Nav.Link
+                                    <Nav.Link className="navbar-title"
                                         style={{ color: "#EFEA5A" }}
                                         as={Link} to='/profile'>
-                                        Profile
+                                        Profile <i class="far fa-star"></i>
                                     </Nav.Link>
-                                    <Nav.Link 
+                                    <Nav.Link  className="navbar-title"
                                     style={{ color: "#EFEA5A" }}
-                                    onClick={Auth.logout}>Logout</Nav.Link>
+                                    onClick={Auth.logout}>Logout <i class="far fa-star"></i></Nav.Link>
                                 </>
                             ) : (
-                                <Nav.Link
+                                <Nav.Link className="navbar-title"
                                     style={{ color: "#EFEA5A" }}
-                                    onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+                                    onClick={() => setShowModal(true)}>Login/Sign Up <i class="far fa-star"></i></Nav.Link>
                             )}
                         </Nav>
                     </Navbar.Collapse>
