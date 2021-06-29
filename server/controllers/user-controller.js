@@ -33,7 +33,7 @@ module.exports = {
         if (!user) {
             return res.status(400).json({ message: "Sorry! User cannot be found" });
         }
-
+console.log(user.isCorrectPassword)
         const correctPw = await user.isCorrectPassword(body.password);
 
         if (!correctPw) {
