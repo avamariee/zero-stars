@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 /* import components */
 import Profile from './components/Profile';
 import AppNav from './components/Navbar';
-import Landing from './components/Landing'
-import Search from './components/Search'
+import Landing from './components/Landing';
+import Search from './components/Search';
 // import Footer from './components/Footer'
 
 import '././styles.css'
@@ -30,63 +30,62 @@ const client = new ApolloClient({
 
 function App() {
 
-/* const [currentPage, setCurrentPage] = useState("landing");
-  
+/*   const [currentPage, setCurrentPage] = useState("profile");
+
   // switch case to display each page
   const displayPage = () => {
     switch (currentPage) {
-  
+
       case "landing":
         return <Landing />;
-  
+
       case "search":
         return <Search />;
-  
+
       case "profile":
         return <Profile />;
-  
+
       default:
-        return <Landing />
-  
+        return null;
+
     }
-  } */
+  }; */
 
   return (
 
-    <ApolloProvider client={client}>
-      <Router>
-        <>
-          <AppNav />
-          <Switch>
-            <Route exact path='/' component={Landing} />
-            <Route exact path='/search' component={Search} />
-            <Route exact path='/profile' component={Profile} />
-            <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
-          </Switch>
-        </>
-      </Router>
-    </ApolloProvider>
+        <ApolloProvider client={client}>
+          <Router>
+            <>
+              <AppNav />
+              <Switch>
+                <Route exact path='/' component={Landing} />
+                <Route exact path='/search' component={Search} />
+                <Route exact path='/profile' component={Profile} />
+                <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
+              </Switch>
+            </>
+          </Router>
+        </ApolloProvider>
+
+
+    /*   <ApolloProvider client={client}> */
+/*     <Router>
+      <div>
+        <div className="mobile-header">
+          <AppNav currentPage={currentPage} setCurrentPage={setCurrentPage}></AppNav>
+        </div>
+        <div>
+          <main>{displayPage()}</main>
+        </div>
+        <div>
+          {/* <Footer></Footer> */
+/*         </div>
+      </div>
+    </Router > */ 
   );
 }
 
 export default App;
 
 
-{/* <ApolloProvider client={client}>
-<Router>
-  <>
-    <AppNav 
-    currentPage={currentPage}
-    setCurrentPage={setCurrentPage}
-    />
-    <div>
-      <main> */}
-        {/* display page from switch case above */}
-     /*    {displayPage()}
-      </main>
-    </div>
-  </> */
-  {/* add footer once merged into develop */}
-  {/* <Footer></Footer> */}
-/* </Router>
-</ApolloProvider> */
+
