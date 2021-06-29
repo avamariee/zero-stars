@@ -18,7 +18,7 @@ const postSchema = new Schema({
         type: String,
         required: true
     },
-    // comments: [commentSchema]
+    comments: [commentSchema]
 },
     {
         toJSON: {
@@ -27,9 +27,9 @@ const postSchema = new Schema({
     }
 )
 
-// postSchema.virtual('commentCount').get(function() {
-//     return this.comments.length;
-// })
+postSchema.virtual('commentCount').get(function() {
+    return this.comments.length;
+})
 
 const Post = model('Post', postSchema);
 
