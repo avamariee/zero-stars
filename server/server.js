@@ -39,10 +39,10 @@ app.get('/asdf', (req, res) => {
   fetch('https://api.yelp.com/v3/businesses/'
 
     // + data.id + "/reviews" +
-    
+
     +
 
-  'delis&latitude=37.786882&longitude=-122.3999721',
+    'search?term=delis&latitude=37.786882&longitude=-122.3999721',
     {
       headers: {
         Authorization: `Bearer ${API_KEY}`,
@@ -51,7 +51,30 @@ app.get('/asdf', (req, res) => {
         "Access-Control-Allow-Origin": "*"
       }
     }).then(data => data.json())
-    .then(data => res.json(data))
+    .then(async data => {
+      console.log(data)
+
+      for (let i = 0; i < data.businesses.length; i++) {
+        const business = data.businesses[i]
+        business.reviews = await (await fetch('https://api.yelp.com/v3/businesses/' + business.id + '/reviews',
+        {
+          headers: {
+            Authorization: `Bearer ${API_KEY}`,
+            Origin: 'localhost',
+            withCredentials: true,
+            "Access-Control-Allow-Origin": "*"
+          }
+        }
+        )).json()
+        console.log(business.reviews)
+      }
+
+      res.json(data)
+
+
+
+
+    })
 })
 
 // app.get('*', (req, res) => {
