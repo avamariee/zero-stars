@@ -188,6 +188,7 @@ footer {
   align-content: center;
   justify-content: center;
   /* align-items: flex-end; */
+  /* border: 10px solid rgba(77, 159, 141, 1); */
 
 }
 
@@ -197,6 +198,11 @@ footer {
 
 .button {
 background-color: rgba(77, 159, 141, 1);
-/* color: #EFEA5A; */
-color: white;
+/* background-color:#EFEA5A; */
+/* color: #408677; */
+color: #EBEBEB;
+}
+
+.btn-label{
+  color: #EBEBEB;
 }

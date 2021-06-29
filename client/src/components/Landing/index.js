@@ -22,7 +22,7 @@ function Landing() {
         <div class="boxLanding my-5">
           <div class="field has-addons ">
             <div class="control searchBar is-centered">
-              <input class="input " type="text" placeholder="Find a resturant" />
+              <input class="input " type="text" placeholder="Find a Resturant" />
             </div>
             <div class="control">
               <a class="button">
@@ -86,8 +86,6 @@ function Landing() {
 
   )
 }
-
-
 
 export default Landing;
 
