@@ -25,3 +25,20 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const SAVE_FOOD = gql`
+  mutation saveFood($input: foodInput!) {
+    saveFood(input: $input) {
+      _id
+      username
+      email
+      savedFoods {
+        FoodId
+        authors
+        image
+        description
+        title
+      }
+    }
+  }
+`;

@@ -67,32 +67,16 @@ function App() {
           <Router>
             <>
               <AppNav />
-              <Search></Search>
-              {/* <Switch>
+              <Switch>
                 <Route exact path='/' component={Landing} />
                 <Route exact path='/search' component={Search} />
                 <Route exact path='/profile' component={Profile} />
                 <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
-              </Switch> */}
+              </Switch>
             </>
           </Router>
         </ApolloProvider>
 
-
-    /*   <ApolloProvider client={client}> */
-/*     <Router>
-      <div>
-        <div className="mobile-header">
-          <AppNav currentPage={currentPage} setCurrentPage={setCurrentPage}></AppNav>
-        </div>
-        <div>
-          <main>{displayPage()}</main>
-        </div>
-        <div>
-          {/* <Footer></Footer> */
-/*         </div>
-      </div>
-    </Router > */ 
   );
 }
 
