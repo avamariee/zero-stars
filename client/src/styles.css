@@ -18,6 +18,32 @@ body {
   font-size: 2rem;
     font-weight: 600;
     line-height: 1.125;
+    font-family: 'Mr Dafoe', cursive;
+}
+
+.main-title {
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 50px;
+}
+
+.navbar-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.navbar-brand {
+  padding-bottom: 0px;
+}
+
+.navbar {
+  padding-top: .05rem;
+}
+
+.fa-star {
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 .avatar img {
@@ -81,6 +107,12 @@ a {
     width: auto;
     height: auto;
   }
+  .navbar-brand {
+    margin: auto;
+  }
+  .container-fluid {
+    margin: auto;
+  }
 }
 
 /* iphone X */
@@ -94,6 +126,17 @@ a {
     margin: auto;
     width: auto;
     height: auto;
+  }
+  .navbar-brand {
+    margin: auto;
+    width: auto;
+    height: auto;
+  }
+  .navbar, .main-title {
+    margin: auto;
+    width: auto;
+    height: auto;
+    font-size: 30px;
   }
 }
 
