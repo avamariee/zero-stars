@@ -16,12 +16,6 @@ import '././styles.css'
 
 // https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.3999721
 
-
-
-// import Switch from 'react-bootstrap/esm/Switch';
-
-
-
 const client = new ApolloClient({
   request: operation => {
     const token = localStorage.getItem('id_token');
@@ -39,26 +33,6 @@ const client = new ApolloClient({
 
 function App() {
 
-/*   const [currentPage, setCurrentPage] = useState("profile");
-
-  // switch case to display each page
-  const displayPage = () => {
-    switch (currentPage) {
-
-      case "landing":
-        return <Landing />;
-
-      case "search":
-        return <Search />;
-
-      case "profile":
-        return <Profile />;
-
-      default:
-        return null;
-
-    }
-  }; */
 
   return (
 
