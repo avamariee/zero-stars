@@ -139,6 +139,14 @@ html {
 .logo {
   background-color: #4D9F8D
 }
+
+.nav-link {
+  background-color: #4D9F8D;
+  color: #EBEBEB;
+}
+.nav-link.active {
+  color: #EFEA5A
+}
 /* tess's css */
 
 /* search result page*/

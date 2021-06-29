@@ -63,7 +63,8 @@ const AppNav = () => {
                 <Tab.Container defaultActiveKey='login'>
                     <Modal.Header closeButton>
                         <Modal.Title id='signup-modal'>
-                            <Nav variant='pills'>
+                            <Nav
+                            style={{ color: "#EFEA5A" }}>
                                 <Nav.Item>
                                     <Nav.Link eventKey='login'>Login</Nav.Link>
                                 </Nav.Item>
