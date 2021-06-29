@@ -150,6 +150,30 @@ html {
 
 /* tess's css */
 
+
+/*luisiannas css */ 
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #EBEBEB;
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight:normal;
+    text-align: center;
+    }
+    .input {
+        text-align: center;
+    }
+
+    .header {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+    }
+    
+    .landingSearch {
+      text-align: center;  
+    }
+
 /* search result page*/
 
 .box {
@@ -190,3 +214,10 @@ html {
   justify-content:center;
 }
 
+<<<<<<< HEAD
+=======
+.searchBar {
+
+}
+
+>>>>>>> 25de73feb9466d10d9f719cd72aa61cba6236054

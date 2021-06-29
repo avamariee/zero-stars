@@ -11,7 +11,17 @@ import Search from './components/Search';
 // import Footer from './components/Footer'
 
 import '././styles.css'
-/* import Switch from 'react-bootstrap/esm/Switch'; */
+
+
+
+// https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.3999721
+
+import Landing from './components/Landing';
+import Footer from './components/Footer';
+
+import Switch from 'react-bootstrap/esm/Switch';
+
+
 
 const client = new ApolloClient({
   request: operation => {
