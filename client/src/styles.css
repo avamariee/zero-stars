@@ -161,14 +161,15 @@ footer{
     font-weight:normal;
     text-align: center;
     }
-    .input {
-        text-align: center;
-    }
 
-    .header {
+  .input {
+        text-align: center;
+  }
+
+  .header {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bolder;
-    }
+  }
     
     .landingSearch {
       text-align: center;  
