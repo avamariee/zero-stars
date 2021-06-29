@@ -40,7 +40,9 @@ const AppNav = () => {
                                         as={Link} to='/profile'>
                                         Profile
                                     </Nav.Link>
-                                    <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                                    <Nav.Link 
+                                    style={{ color: "#EFEA5A" }}
+                                    onClick={Auth.logout}>Logout</Nav.Link>
                                 </>
                             ) : (
                                 <Nav.Link
