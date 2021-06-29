@@ -41,7 +41,7 @@ export const saveFood = (FoodData, token) => {
 
 
 // search to yelp api
-export const searchYlpFoods = (query) => {
+export const searchYelpFoods = (query) => {
     return fetch('https://api.yelp.com/v3/businesses/' + business.id + '/reviews',
         {
             headers: {
