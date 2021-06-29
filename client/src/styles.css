@@ -132,6 +132,9 @@ html {
   background-color: rgb(247, 12, 12, 0.5);
 }
 
+.button.btn {
+  color: rgb(247, 12, 12, 0.5)
+}
 /* tess's css */
 
 /* search result page*/
@@ -174,6 +177,3 @@ html {
   justify-content:center;
 }
 
-.searchBar {
-
-}

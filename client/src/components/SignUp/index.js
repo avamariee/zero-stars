@@ -4,6 +4,7 @@ import { Form, Button, Alert, Dropdown } from 'react-bootstrap';
 import Auth from '../../utils/auth';
 import { ADD_USER } from '../../utils/mutations';
 import { useMutation } from '@apollo/react-hooks';
+import '../../styles.css'
 
 const SignupForm = () => {
 
@@ -169,7 +170,8 @@ const SignupForm = () => {
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
-          variant='outline-warning'>
+          variant='default'
+          style={{ color: "#EFEA5A", background: "#4D9F8D" }}>
           Submit
         </Button>
       </Form>
