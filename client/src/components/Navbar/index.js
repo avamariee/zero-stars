@@ -5,34 +5,49 @@ import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import SignUp from '../SignUp';
 import Login from '../Login';
 import Auth from '../../utils/auth';
+import '../../styles.css'
+
 
 const AppNav = () => {
     // set modal display state
+
+
     const [showModal, setShowModal] = useState(false);
+
+
 
     return (
         <>
             <Navbar expand='lg'>
                 <Container fluid>
-                    <Navbar.Brand>
+                    <Navbar.Brand
+                        style={{ color: "#EFEA5A" }}>
                         Zero Stars!
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='navbar' />
                     <Navbar.Collapse id='navbar'>
                         <Nav className='ml-auto'>
-                            <Nav.Link as={Link} to='/'>
+                            <Nav.Link
+                                style={{ color: "#EFEA5A" }}
+                                as={Link} to='/'>
                                 Search
                             </Nav.Link>
                             {/* if user is logged in show saved books and logout */}
                             {Auth.loggedIn() ? (
                                 <>
-                                    <Nav.Link as={Link} to='/profile'>
+                                    <Nav.Link
+                                        style={{ color: "#EFEA5A" }}
+                                        as={Link} to='/profile'>
                                         Profile
                                     </Nav.Link>
-                                    <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                                    <Nav.Link 
+                                    style={{ color: "#EFEA5A" }}
+                                    onClick={Auth.logout}>Logout</Nav.Link>
                                 </>
                             ) : (
-                                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+                                <Nav.Link
+                                    style={{ color: "#EFEA5A" }}
+                                    onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
                             )}
                         </Nav>
                     </Navbar.Collapse>
@@ -48,7 +63,7 @@ const AppNav = () => {
                 <Tab.Container defaultActiveKey='login'>
                     <Modal.Header closeButton>
                         <Modal.Title id='signup-modal'>
-                            <Nav variant='pills'>
+                            <Nav>
                                 <Nav.Item>
                                     <Nav.Link eventKey='login'>Login</Nav.Link>
                                 </Nav.Item>

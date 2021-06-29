@@ -110,6 +110,43 @@ html {
   background-color: #4D9F8D;
 }
 
+.close ::before{
+  content: 'X';
+  visibility: visible;
+  color: "black";
+  font-weight: bold;
+}
+
+.sr-only::before{
+  visibility: hidden;
+}
+
+.close{
+  /*background-color: red; */
+  visibility: hidden;
+  position: absolute;
+  right: 32px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(247, 12, 12, 0.5);
+}
+
+.button.btn {
+  color: rgb(247, 12, 12, 0.5)
+}
+
+.logo {
+  background-color: #4D9F8D
+}
+
+.nav-link {
+  background-color: #4D9F8D;
+  color: #EBEBEB;
+}
+.nav-link.active {
+  color: #EFEA5A
+}
 
 /* tess's css */
 
@@ -178,7 +215,10 @@ footer{
   justify-content:center;
 }
 
+<<<<<<< HEAD
+=======
 .searchBar {
 
 }
 
+>>>>>>> 25de73feb9466d10d9f719cd72aa61cba6236054

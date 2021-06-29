@@ -4,6 +4,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import Auth from '../../utils/auth';
 import { LOGIN_USER } from '../../utils/mutations';
 import { useMutation } from '@apollo/react-hooks';
+import '../../styles.css'
 
 const Login = () => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
@@ -79,7 +80,8 @@ const Login = () => {
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
-          variant='outline-warning'>
+          variant='default'
+          style={{ color: "#EFEA5A", background: "#4D9F8D" }}>
           Submit
         </Button>
       </Form>

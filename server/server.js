@@ -87,9 +87,3 @@ db.once('open', () => {
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
-
-// app.get("/Pizza", (req, res) => {res.json({Name: "Pizza"})})
-// app.listen(PORT)
-
-
-console.log('Pizza');
