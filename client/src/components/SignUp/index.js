@@ -99,7 +99,7 @@ const SignupForm = () => {
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
+{/*         <Form.Group>
           <Form.Label htmlFor='birthday'>Birthday</Form.Label>
           <Form.Control
             type='date'
@@ -123,7 +123,7 @@ const SignupForm = () => {
             required
           />
           <Form.Control.Feedback type='invalid'>Required: gender!</Form.Control.Feedback>
-        </Form.Group>
+        </Form.Group> */}
 
 {/*         {/*         <Form.Group>
         <Form.Label htmlFor='picture'>Picture</Form.Label> <br/>

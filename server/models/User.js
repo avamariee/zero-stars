@@ -20,7 +20,7 @@ const userSchema = new Schema(
         type: String,
         required: true,
         minlength: 4
-    },
+    }/* ,
     birthday: {
         type: Date,
         required: true,
@@ -28,7 +28,7 @@ const userSchema = new Schema(
     gender: {
         type: String,
         required: true
-    },
+    }, */
 
     
     // user can favorite the restaurant with terrible reviews
