@@ -11,7 +11,12 @@ import Search from './components/Search'
 // import Footer from './components/Footer'
 
 import '././styles.css'
+
+import Landing from './components/Landing';
+import Footer from './components/Footer';
+
 import Switch from 'react-bootstrap/esm/Switch';
+
 
 const client = new ApolloClient({
   request: operation => {
