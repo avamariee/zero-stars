@@ -21,6 +21,13 @@ body {
     font-family: 'Mr Dafoe', cursive;
 }
 
+.titlez2 {
+  color: #EFEA5A;
+  font-size: 2rem;
+  font-family: 'Barlow', sans-serif;
+
+}
+
 .main-title {
   font-family: 'Mr Dafoe', cursive;
   font-size: 50px;

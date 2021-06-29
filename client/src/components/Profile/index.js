@@ -41,20 +41,16 @@ function Profile() {
             <div className="column"><img src="http://placekitten.com/200/200"></img></div>
           </div>
           <div className="media-content column">
-            <p className="titlez">Kitty Cat</p>
+            <p className="titlez2">Kitty Cat</p>
             <p className="subtitle">
-              Meow meow meow meow, meow meow meow. Meow. Meow meow meow meow. Meow.
+              Description coming in the future.
             </p>
-            <p className="subtitle">
-              Gender: <span id="gender">Female</span> <br></br>
-              Birthday: <span id="birthdate">06/24/2021</span> <br></br>
-
-            </p>
+            
           </div>
         </div>
         <div className="columns avatar is-mobile">
           <div className="column favorites">
-            <h2 className="titlez is-centered">
+            <h2 className="titlez2 is-centered">
               Favorites
             </h2>
             <ul>
@@ -70,7 +66,7 @@ function Profile() {
         <div className="columns avatar is-mobile">
           <div className="column comments">
 
-            <h2 className="titlez">
+            <h2 className="titlez2">
               Posts/Comments
             </h2>
 
@@ -95,7 +91,7 @@ function Profile() {
 
         <div className="columns avatar is-mobile">
           <div className="column friends">
-            <h2 className="titlez">
+            <h2 className="titlez2">
               Extra? Friends List
             </h2>
             <ul>
