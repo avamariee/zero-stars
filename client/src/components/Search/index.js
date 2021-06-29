@@ -18,6 +18,7 @@ function Search() {
   // yelp API\
   const [badRestaurants, setBadRestaurants] = useState([])
   // need a use state specifically for the search function
+
   const handleSubmit = (e) => {
 
     e.preventDefault();
