@@ -110,7 +110,32 @@ html {
   background-color: #4D9F8D;
 }
 
+
 /* tess's css */
+
+
+/*luisiannas css */ 
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #EBEBEB;
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight:normal;
+    text-align: center;
+    }
+    .input {
+        text-align: center;
+    }
+
+    .header {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+    }
+    
+    .landingSearch {
+      text-align: center;  
+    }
 
 /* search result page*/
 
@@ -155,3 +180,4 @@ html {
 .searchBar {
 
 }
+
