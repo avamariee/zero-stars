@@ -8,7 +8,7 @@ import Profile from './components/Profile';
 import AppNav from './components/Navbar';
 import Landing from './components/Landing'
 import Search from './components/Search'
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 import '././styles.css'
 import Switch from 'react-bootstrap/esm/Switch';
@@ -67,8 +67,8 @@ const [currentPage, setCurrentPage] = useState("landing");
             </main>
           </div>
         </>
-        {/* add footer once merged into develop */}
-        {/* <Footer></Footer> */}
+     
+        <Footer></Footer>
       </Router>
     </ApolloProvider>
   );
