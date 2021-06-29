@@ -24,6 +24,8 @@ type User {
     _id: ID
     username: String
     email: String
+    #if friends,  friendCount: Int
+    #if friends,  friends: [User]
 
 }
 
@@ -50,6 +52,7 @@ type Auth {
     user: User
   }
 
-`
+`;
 
+//export the typeDefs
 module.exports = typeDefs;

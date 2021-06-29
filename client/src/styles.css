@@ -106,8 +106,74 @@ html {
   background-color: #4D9F8D;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD=======>>>>>>>origin/develop
+=======
+.close ::before{
+  content: 'X';
+  visibility: visible;
+  color: "black";
+  font-weight: bold;
+}
+
+.sr-only::before{
+  visibility: hidden;
+}
+
+.close{
+  /*background-color: red; */
+  visibility: hidden;
+  position: absolute;
+  right: 32px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(247, 12, 12, 0.5);
+}
+
+.button.btn {
+  color: rgb(247, 12, 12, 0.5)
+}
+
+.logo {
+  background-color: #4D9F8D
+}
+
+.nav-link {
+  background-color: #4D9F8D;
+  color: #EBEBEB;
+}
+.nav-link.active {
+  color: #EFEA5A
+}
+
+>>>>>>> ba85428e68df802a71470dc2d950b4ea5523bbfe
 /* tess's css */
+
+
+/*luisiannas css */ 
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #EBEBEB;
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight:normal;
+    text-align: center;
+    }
+
+  .input {
+        text-align: center;
+  }
+
+  .header {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+  }
+    
+    .landingSearch {
+      text-align: center;  
+    }
 
 /* search result page*/
 .img.logo {
@@ -153,6 +219,8 @@ html {
   justify-content: center;
 }
 
+<<<<<<< HEAD
+=======
 .searchBar {
   display: flex;
   align-content: center;
@@ -203,6 +271,12 @@ background-color: rgba(77, 159, 141, 1);
 color: #EBEBEB;
 }
 
+<<<<<<< HEAD
 .btn-label{
   color: #EBEBEB;
 }
+=======
+}
+
+>>>>>>> 25de73feb9466d10d9f719cd72aa61cba6236054
+>>>>>>> ba85428e68df802a71470dc2d950b4ea5523bbfe
