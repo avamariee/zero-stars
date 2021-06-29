@@ -18,7 +18,6 @@ type Favorite {
 type Review {
     _id: ID
     reviewBody: String
-}
 
 type User {
     _id: ID
