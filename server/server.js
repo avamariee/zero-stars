@@ -36,13 +36,19 @@ console.log(API_KEY)
 
 app.get('/asdf', (req, res) => {
 
-  fetch('https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.3999721',
+  fetch('https://api.yelp.com/v3/businesses/'
+
+    // + data.id + "/reviews" +
+    
+    +
+
+  'delis&latitude=37.786882&longitude=-122.3999721',
     {
-          headers: {
-              Authorization: `Bearer ${API_KEY}`,
-              Origin: 'localhost',
-              withCredentials: true,
-              "Access-Control-Allow-Origin": "*"
+      headers: {
+        Authorization: `Bearer ${API_KEY}`,
+        Origin: 'localhost',
+        withCredentials: true,
+        "Access-Control-Allow-Origin": "*"
       }
     }).then(data => data.json())
     .then(data => res.json(data))

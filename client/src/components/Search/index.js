@@ -72,7 +72,7 @@ function Search() {
                 </figure>
               </div>
               <div class="media-content">
-                <p class="title is-4 is-black">Search Result from Yelp 1</p>
+                <p class="title is-4 is-black">{badRestaurants.map(rest => <h1>{ (rest.name) }</h1>)}</p>
                 <p class="subtitle is-6">@rest1</p>
               </div>
             </div>

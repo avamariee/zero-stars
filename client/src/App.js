@@ -73,7 +73,7 @@ const [currentPage, setCurrentPage] = useState("landing");
             <main>
               {/* display page from switch case above */}
               {displayPage()}
-              <Search ></Search>
+              <Search></Search>
             </main>
           </div>
         </>
