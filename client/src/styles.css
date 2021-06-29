@@ -106,9 +106,7 @@ html {
   background-color: #4D9F8D;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD=======>>>>>>>origin/develop
-=======
+
 .close ::before{
   content: 'X';
   visibility: visible;
@@ -147,7 +145,6 @@ html {
   color: #EFEA5A
 }
 
->>>>>>> ba85428e68df802a71470dc2d950b4ea5523bbfe
 /* tess's css */
 
 
@@ -219,8 +216,6 @@ footer{
   justify-content: center;
 }
 
-<<<<<<< HEAD
-=======
 .searchBar {
   display: flex;
   align-content: center;
@@ -271,12 +266,7 @@ background-color: rgba(77, 159, 141, 1);
 color: #EBEBEB;
 }
 
-<<<<<<< HEAD
 .btn-label{
   color: #EBEBEB;
 }
-=======
-}
 
->>>>>>> 25de73feb9466d10d9f719cd72aa61cba6236054
->>>>>>> ba85428e68df802a71470dc2d950b4ea5523bbfe
