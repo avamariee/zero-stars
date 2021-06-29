@@ -34,7 +34,7 @@ const SearchFoods = () => {
         }
 
         try {
-            const response = await searchYelpFoods(searchInput);
+            const response = /* await searchYelpFoods */(searchInput);
 
             if (!response.ok) {
                 throw new Error('something went wrong!');
@@ -58,9 +58,9 @@ const SearchFoods = () => {
     };
 
     // create function to handle saving a food to our database
-    const handleSaveFood = async (FoodId) => {
+    const handleSaveFood = async (foodId) => {
         // find the food in `searchedFoods` state by the matching id
-        const FoodToSave = searchedFoods.find((food) => food.foodId === foodId);
+        const foodToSave = searchedFoods.find((food) => food.foodId === foodId);
 
         // get token
         const token = Auth.loggedIn() ? Auth.getToken() : null;

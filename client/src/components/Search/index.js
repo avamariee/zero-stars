@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import starlogo from '../../zerostars.png';
+import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
 
 
 function Search() {

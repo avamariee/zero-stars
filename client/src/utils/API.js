@@ -40,7 +40,7 @@ export const saveFood = (FoodData, token) => {
 };
 
 
-// search to yelp api
+/* // search to yelp api
 export const searchYelpFoods = (query) => {
     return fetch('https://api.yelp.com/v3/businesses/' + business.id + '/reviews',
         {
@@ -51,4 +51,4 @@ export const searchYelpFoods = (query) => {
                 "Access-Control-Allow-Origin": "*"
             }
         })
-};
+}; */
