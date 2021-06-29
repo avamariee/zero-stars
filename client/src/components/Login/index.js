@@ -79,7 +79,7 @@ const Login = () => {
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
-          variant='success'>
+          variant='outline-warning'>
           Submit
         </Button>
       </Form>
