@@ -8,7 +8,7 @@ import Profile from './components/Profile';
 import AppNav from './components/Navbar';
 import Landing from './components/Landing'
 import Search from './components/Search'
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 import '././styles.css'
 
@@ -16,10 +16,9 @@ import '././styles.css'
 
 // https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.3999721
 
-import Landing from './components/Landing';
-import Footer from './components/Footer';
 
-import Switch from 'react-bootstrap/esm/Switch';
+
+// import Switch from 'react-bootstrap/esm/Switch';
 
 
 
@@ -74,11 +73,11 @@ const [currentPage, setCurrentPage] = useState("landing");
             <main>
               {/* display page from switch case above */}
               {displayPage()}
+              <Search ></Search>
             </main>
           </div>
         </>
-        {/* add footer once merged into develop */}
-        {/* <Footer></Footer> */}
+        <Footer></Footer>
       </Router>
     </ApolloProvider>
   );

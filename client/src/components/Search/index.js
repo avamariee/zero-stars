@@ -1,24 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import starlogo from '../../zerostars.png';
 
 
 
 function Search() {
 
-  function getApiStuff() {
-    return fetch('/asdf')
-      .then(data => data.json())
+  const getApiStuff = useCallback(
+    // track search state in dependency array
+    function () {
+      return fetch('/asdf')
+        .then(data => data.json())
 
-  }
+    },
+    // use this one
+    []
 
+  )
   // yelp API\
   const [badRestaurants, setBadRestaurants] = useState([])
+  // need a use state specifically for the search function
 
 
-  // onclick for search button needs to run this api
-  // add input parameters and send the search parameters to the backend
-  getApiStuff()
-    .then(data => setBadRestaurants(data.businesses))
+
+  useEffect(() => {
+
+
+    // onclick for search button needs to run this api
+    // add input parameters and send the search parameters to the backend
+    getApiStuff()
+      .then(data => setBadRestaurants(data.businesses))
+
+
+  }, [])
 
 
 
@@ -35,7 +48,7 @@ function Search() {
 
       <div class="field has-addons ">
         <div class="control searchBar">
-          <input class="input" type="text" placeholder="Find a repository" />
+          <input class="input" type="text" placeholder="Search Again" />
         </div>
         <div class="control">
           <a class="button is-info">
@@ -45,7 +58,7 @@ function Search() {
       </div>
 
       <div>
-        {/* {badRestaurants.map(rest => <p>{rest.name}</p>)} */}
+        {badRestaurants.map(rest => <p>{rest.name}</p>)}
       </div>
       <div class="box">
         <div class="card">
