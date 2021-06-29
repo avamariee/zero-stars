@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 import starlogo from '../../zerostars.png';
 
 
-
 function Search() {
 
   const getApiStuff = useCallback(

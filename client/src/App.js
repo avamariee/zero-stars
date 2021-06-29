@@ -10,7 +10,6 @@ import Landing from './components/Landing'
 import Search from './components/Search'
 import Footer from './components/Footer'
 
-
 import '././styles.css'
 
 
