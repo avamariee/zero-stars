@@ -35,40 +35,22 @@ function Profile() {
 
   return (
     <div>
-      <div class="columns is-centered is-mobile avatar">
-        <div class="columns is-half is-mobile">
-          <div class="column">{/* <img src={profilePhoto}></img> */}</div>
-        </div>
-        <div class="media-content">
-          <p class="title">Kitty Cat</p>
-          <p class="subtitle">
-            Meow meow meow meow, meow meow meow. Meow. Meow meow meow meow. Meow.
-          </p>
-          <p class="subtitle">
-            Gender: <span id="gender">Female</span> <br></br>
-            Birthday: <span id="birthdate">06/24/2021</span> <br></br>
-
-          </p>
-          <div class="columns is-mobile">
-            <div class="column">
-              <h2 class="title">
-                Favorites
-              </h2>
-              <ul>
-                <a href='/'><li>🍔<span>Taco Bell</span></li></a>
-                <a href='/'><li>🍔<span>Taco Bell</span></li></a>
-                <a href='/'><li>🍔<span>Taco Bell</span></li></a>
-                <a href='/'><li>🍔<span>Taco Bell</span></li></a>
-                <a href='/'><li>🍔<span>Taco Bell</span></li></a>
-              </ul>
-            </div>
-
+      <div>
+        <div className="columns is-centered is-mobile avatar">
+          <div className="columns is-half is-mobile">
+            <div className="column"><img src="http://placekitten.com/200/200"></img></div>
+          </div>
+          <div className="media-content column">
+            <p className="titlez2">Kitty Cat</p>
+            <p className="subtitle">
+              Description coming in the future.
+            </p>
             
           </div>
         </div>
         <div className="columns avatar is-mobile">
           <div className="column favorites">
-            <h2 className="title is-centered">
+            <h2 className="titlez2 is-centered">
               Favorites
             </h2>
             <ul>
@@ -84,7 +66,7 @@ function Profile() {
         <div className="columns avatar is-mobile">
           <div className="column comments">
 
-            <h2 className="title">
+            <h2 className="titlez2">
               Posts/Comments
             </h2>
 
@@ -109,7 +91,7 @@ function Profile() {
 
         <div className="columns avatar is-mobile">
           <div className="column friends">
-            <h2 className="title">
+            <h2 className="titlez2">
               Extra? Friends List
             </h2>
             <ul>
@@ -125,5 +107,4 @@ function Profile() {
     </div>
   );
 }
-
 export default Profile;
