@@ -225,9 +225,13 @@ html {
   color: #EBEBEB;
 }
 .nav-link.active {
-  color: #EFEA5A
+  color: #EFEA5A;
 }
 
+.display-2 {
+  font-family: 'Barlow', sans-serif;
+  text-align: center;
+}
 /* tess's css */
 
 

@@ -26,3 +26,29 @@ export const loginUser = (userData) => {
         body: JSON.stringify(userData),
     });
 };
+
+// save review data for a logged in user
+export const saveFood = (FoodData, token) => {
+    return fetch('/api/users', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(FoodData),
+    });
+};
+
+
+/* // search to yelp api
+export const searchYelpFoods = (query) => {
+    return fetch('https://api.yelp.com/v3/businesses/' + business.id + '/reviews',
+        {
+            headers: {
+                Authorization: `Bearer ${API_KEY}`,
+                Origin: 'localhost',
+                withCredentials: true,
+                "Access-Control-Allow-Origin": "*"
+            }
+        })
+}; */
