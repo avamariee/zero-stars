@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import { GET_ME } from '../../utils/queries';
+import Auth from '../../utils/auth';
 
 
 function Profile() {
@@ -13,6 +14,7 @@ function Profile() {
   });
 
   const user = data?.me || data?.user || {};
+  console.log(userParam)
 
 
 //////////////////////////////////////////////////////////////////////
@@ -52,7 +54,8 @@ import nonbinaryImage from '../../images/nonbinary.png' */
             <div className="column"><img src="http://placekitten.com/200/200"></img></div>
           </div>
           <div className="media-content column">
-            <p className="titlez2">{userParam ? `${user.username}` : 'your'}</p>
+            <p className="titlez2">
+              {userParam ? `${user.username}`: ''}</p>
             <p className="subtitle">
               Description coming in the future.
             </p>
