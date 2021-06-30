@@ -9,7 +9,7 @@ const resolvers = {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
                     .select('-__v -password')
-                    .populate('thoughts')
+                    .populate('posts')
                     .populate('friends');
 
                 return userData;
@@ -94,7 +94,7 @@ const resolvers = {
 
                 await User.findByIdAndUpdate(
                     { _id: context.user._id },
-                    { $push: { thoughts: thought._id } },
+                    { $push: { posts: post._id } },
                     { new: true }
                 );
 
