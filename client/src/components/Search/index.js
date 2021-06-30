@@ -73,7 +73,7 @@ function Search() {
         <div class="control searchBar">
           <a>
             <form onSubmit={handleSubmit}>
-              <input class="input" type="text" placeholder="Search Again"
+              <input class="input" type="text" placeholder="Search"
                 onChange={(e) => setSearchInput(e.target.value)} value={searchInput}></input>
               <button type='submit'>submit</button>
             </form>

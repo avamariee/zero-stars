@@ -1,23 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { GET_ME } from '../../utils/queries';
-
+import Auth from '../../utils/auth';
 
 
 function Profile() {
 
   const { username: userParam } = useParams();
 
-  const { data } = useQuery(userParam ? GET_ME : {
-    variables: { username: userParam }
-  });
+  const { loading, data } = useQuery(GET_ME);
 
   const user = data?.me || data?.user || {};
-  console.log(userParam)
+
+  // redirect to personal profile page if username is the logged-in user's
+  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+    return <Redirect to="/profile" />;
+  }
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!user?.username) {
+    return (
+      <h4>
+        You need to be logged in to see this page. Use the navigation links above to sign up or log in!
+      </h4>
+    );
+  }
 
 
-//////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////
   //start with empty string once you have API which will call with what we do want and set the state
   //switch statement 17, 20, 23
 
@@ -25,26 +39,26 @@ function Profile() {
 import femaleImage from '../../images/female.png'
 import nonbinaryImage from '../../images/nonbinary.png' */
 
-/*   const [userGender, setUserGender] = useState('Male');
-  const [profilePhoto, setProfilePhoto] = useState(nonbinaryImage);
-
-  useEffect(() => {
-    // Update the document title using the browser API
-    if (userGender === 'Male') {
-      setProfilePhoto(maleImage)
-    }
-    if (userGender === 'Female') {
-      setProfilePhoto(femaleImage)
-    }
-    if (userGender === 'Nonbinary') {
-      setProfilePhoto(nonbinaryImage)
-    }
-
-  },
-  [userGender]
-
-  ); */
-//////////////////////////////////////////////////////////////////////
+  /*   const [userGender, setUserGender] = useState('Male');
+    const [profilePhoto, setProfilePhoto] = useState(nonbinaryImage);
+  
+    useEffect(() => {
+      // Update the document title using the browser API
+      if (userGender === 'Male') {
+        setProfilePhoto(maleImage)
+      }
+      if (userGender === 'Female') {
+        setProfilePhoto(femaleImage)
+      }
+      if (userGender === 'Nonbinary') {
+        setProfilePhoto(nonbinaryImage)
+      }
+  
+    },
+    [userGender]
+  
+    ); */
+  //////////////////////////////////////////////////////////////////////
 
   return (
     <div>
@@ -55,11 +69,11 @@ import nonbinaryImage from '../../images/nonbinary.png' */
           </div>
           <div className="media-content column">
             <p className="titlez2">
-              {userParam ? `${user.username}`: 'your'}</p>
+              {user.username}</p>
             <p className="subtitle">
               Description coming in the future.
             </p>
-            
+
           </div>
         </div>
         <div className="columns avatar is-mobile">

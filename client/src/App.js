@@ -44,7 +44,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/search' component={Search} />
-            <Route exact path='/profile/:username' component={Profile} />
+            <Route exact path='/profile' component={Profile} />
             <Route render={() => <h1
               style={{ color: "#408677" }}
               className='display-2'>Wrong page!</h1>} />

@@ -30,7 +30,7 @@ const AppNav = () => {
                             <Nav.Link className="navbar-title"
                                 style={{ color: "#EFEA5A" }}
                                 as={Link} to='/'>
-                                Search <i class="far fa-star"></i>
+                                Home <i class="far fa-star"></i>
                             </Nav.Link>
                             {/* if user is logged in show saved books and logout */}
                             {Auth.loggedIn() ? (
