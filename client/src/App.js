@@ -11,7 +11,6 @@ import Search from './components/Search'
 import Footer from './components/Footer'
 
 import '././styles.css'
-import SearchFoods from './pages/SearchFood';
 
 
 
@@ -47,7 +46,9 @@ function App() {
                 <Route exact path='/' component={Landing} />
                 <Route exact path='/search' component={Search} />
                 <Route exact path='/profile/:username' component={Profile} />
-                <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
+                <Route render={() => <h1 
+                style={{ color: "#408677" }}
+                className='display-2'>Wrong page!</h1>} />
               </Switch>
             </>
           </Router>

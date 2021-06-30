@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useQuery, useMutation } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/react-hooks';
 import { GET_ME } from '../../utils/queries';
-import Auth from '../../utils/auth';
+
 
 
 function Profile() {
