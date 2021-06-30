@@ -9,6 +9,8 @@ import AppNav from './components/Navbar';
 import Landing from './components/Landing'
 import Search from './components/Search'
 import Footer from './components/Footer'
+import PostForm from './components/PostForm';
+import PostDisplay from './components/PostDisplay';
 
 import '././styles.css'
 

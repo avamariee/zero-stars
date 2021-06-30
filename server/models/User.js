@@ -20,20 +20,39 @@ const userSchema = new Schema(
             type: String,
             required: true,
             minlength: 4
-        }/* ,
-    birthday: {
-        type: Date,
-        required: true,
+        },
+        posts: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Post'
+            }
+        ],
+        friends: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'User'
+            }
+        ]
     },
-    gender: {
-        type: String,
-        required: true
-    }, */
-
-
-        // user can favorite the restaurant with terrible reviews
-        // favorites: [favoritesSchema]
+    {
+        toJSON: {
+            virtuals: true
+        }
     });
+
+/* ,
+birthday: {
+type: Date,
+required: true,
+},
+gender: {
+type: String,
+required: true
+}, */
+
+
+// user can favorite the restaurant with terrible reviews
+// favorites: [favoritesSchema]
 
 // add favorites later?
 
@@ -51,6 +70,10 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
     return bcrypt.compare(password, this.password);
 };
+
+userSchema.virtual('friendCount').get(function() {
+    return this.friends.length;
+})
 
 const User = model('User', userSchema);
 

@@ -45,17 +45,18 @@ function Search() {
         </div>
       </div>
 
-      <div class="field has-addons ">
-        <div class="control searchBar">
-          <input class="input" type="text" placeholder="Search Again" />
+      <div class="boxLanding my-5">
+          <div class="field has-addons ">
+            <div class="control searchBar is-centered">
+              <input class="input " type="text" placeholder="Find a Resturant" />
+            </div>
+            <div class="control">
+              <a class="button">
+                Search
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="control">
-          <a class="button is-info">
-            Search
-          </a>
-        </div>
-      </div>
-
       <div>
       </div>
       <div class="box">

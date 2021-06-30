@@ -66,7 +66,7 @@ app.get('/asdf', (req, res) => {
           }
         }
         )).json()
-        console.log(business.reviews)
+        // console.log(business.reviews)
       }
 
       res.json(data)

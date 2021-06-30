@@ -25,3 +25,47 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_FRIEND = gql`
+mutation addFriend($id: ID!){
+  addFriend(friendId: $id){
+    _id
+    username
+    friendCount
+    friends {
+      _id
+      username
+    }
+  }
+}
+`;
+
+export const ADD_POST = gql`
+mutation addPost($postText: String!){
+  addPost(postText: $postText){
+    _id
+    postText
+    createdAt
+    username
+    commentCount
+    comments {
+      _id
+    }
+  }
+}
+`;
+
+export const ADD_COMMENT = gql`
+mutation addcomment($postId: ID!, $commentBody: String!){
+  addcomment(postId: $postId, commentBody: $commentBody){
+    _id
+    commentCount
+    comments {
+      _id
+      commentBody
+      createdAt
+      username
+    }
+  }
+}
+`;
