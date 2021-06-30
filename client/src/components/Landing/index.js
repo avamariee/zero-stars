@@ -6,6 +6,8 @@ import fakephoto from '../../fakephoto.png';
 import fakephoto2 from '../../fakephoto2.png';
 import fakephoto3 from '../../fakephoto3.png';
 import Carousel from 'react-bootstrap/Carousel'
+import PostForm from '../PostForm/index'
+import PostDisplay from '../PostDisplay/index';
 
 
 function Landing() {
@@ -74,7 +76,13 @@ function Landing() {
                     </Carousel.Item>
                   </Carousel>
 
+
                 </div>
+                  <PostForm>
+                  </PostForm>
+                  <PostDisplay>
+
+                  </PostDisplay>
               </section>
             </div>
           </div>

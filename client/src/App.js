@@ -69,8 +69,7 @@ function App() {
           <Router>
             <>
               <AppNav />
-              <PostForm></PostForm>
-              <PostDisplay></PostDisplay>
+              <Search></Search>
               {/* <Switch>
                 <Route exact path='/' component={Landing} />
                 <Route exact path='/search' component={Search} />

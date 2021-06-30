@@ -47,7 +47,7 @@ body {
 }
 
 .post-form {
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -250,6 +250,7 @@ footer{
 
   .input {
         text-align: center;
+        background-color: #EFEA5A;
   }
 
   .header {
@@ -310,6 +311,7 @@ footer{
   align-content: center;
   justify-content: center;
   align-items: flex-end;
+  border-color: rgb(31, 30, 30);
 }
 
 /* Luisianna*/
