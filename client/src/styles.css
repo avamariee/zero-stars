@@ -25,12 +25,47 @@ body {
   color: #EFEA5A;
   font-size: 2rem;
   font-family: 'Barlow', sans-serif;
+}
 
+.titlez3 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.mb-3, .card {
+  max-width: 75%;
 }
 
 .main-title {
   font-family: 'Mr Dafoe', cursive;
   font-size: 50px;
+}
+
+.posts-column {
+  width: 500px;
+  background-color: #4D9F8D;
+}
+
+.post-form {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #4D9F8D;
+  font-weight: bolder;
+}
+.btn:hover {
+  background-color: #EFEA5A;
+
+}
+textarea {
+  resize: none;
+  width: 400px;
+  height: 100px;
+}
+.text-error {
+  margin-bottom: 10px;
 }
 
 .navbar-title {

@@ -5,38 +5,41 @@ import { QUERY_POSTS } from '../../utils/queries';
 
 const PostDisplay = ({ title }) => {
 
-    const { loading, error, data:{posts} } =  useQuery(QUERY_POSTS)
+    const { loading, error, data } = useQuery(QUERY_POSTS)
 
-    console.log(posts)
 
-    if (!posts?.length) {
+    if (!data?.posts.length) {
         return <h3>No posts yet.</h3>;
     }
 
     return (
         <div>
             <h3>{title}</h3>
-            {posts &&
-                posts.map(post => (
-                    <div key={post._id} className="card mb-3">
-                        <p className="card-header">
-                            <Link
-                                to={`/profile/${post.username}`}
-                                style={{ fontWeight: 700 }}
-                                className="text-light"
-                            >
-                                {post.username}
-                            </Link>{' '}
-                            post on {post.createdAt}
-                        </p>
-                        <div className="card-body">
-                            <Link to={`/post/${post._id}`}>
-                                <p>{post.postText}</p>
-                                <p className="mb-0">
-                                    Comments: {post.commentCount} || Click to{' '}
-                                    {post.commentCount ? 'see' : 'start'} the discussion!
+            {data?.posts &&
+                data?.posts.map(post => (
+                    <div className="columns is-centered">
+                        <div key={post._id} className="card mb-3 columns is-centered">
+                            <div className="column posts-column">
+                                <p className="card-header">
+                                    <Link
+                                        to={`/profile/${post.username}`}
+                                        style={{ fontWeight: 700 }}
+                                        className="titlez3"
+                                    >
+                                        {post.username}
+                                    </Link>{' '}
+                                    posted on {post.createdAt}
                                 </p>
-                            </Link>
+                                <div className="card-body">
+                                    <Link to={`/post/${post._id}`}>
+                                        <p>{post.postText}</p>
+                                        <p className="mb-0">
+                                            Comments: {post.commentCount} || Click to{' '}
+                                            {post.commentCount ? 'see' : 'start'} the discussion!
+                                        </p>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 ))}

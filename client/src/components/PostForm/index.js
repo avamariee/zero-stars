@@ -52,25 +52,29 @@ const PostForm = () => {
     };
 
     return (
-        <div>
-            <p className={`${characterCount === 280 || error ? 'text-error' : ''}`}>
-                Character Count: {characterCount}/280
-                {error && <span className="bottom-error">Something went wrong...</span>}
-                {console.log('If theres an error with the post, this is the error: ' + error)}
-            </p>
+        <div className="columns is-centered post-form">
+           
             <form
                 className="post-form"
                 onSubmit={handleFormSubmit}
             >
+           
+                <p className={`${characterCount === 280 || error ? 'text-error' : ''}`}>
+                    Character Count: {characterCount}/280
+                    {error && <span className="bottom-error">Something went wrong...</span>}
+                    {console.log('If theres an error with the post, this is the error: ' + error)}
+                </p>
                 <textarea
                     placeholder="Type your post here!"
                     value={postText}
                     className="form-input"
                     onChange={handleChange}
                 ></textarea>
-                <button className="btn" type="submit">
-                    Submit
-                </button>
+                <div>
+                    <button className="btn" type="submit">
+                        Submit
+                    </button>
+                </div>
             </form>
         </div>
     )
