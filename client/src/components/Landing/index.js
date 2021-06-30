@@ -27,7 +27,8 @@ function Landing() {
               <input class="input " type="text" placeholder="Find a Resturant" />
             </div>
             <div class="control">
-              <a class="button">
+              <a class="button"
+              style={{ color: "#EFEA5A", background: "#4D9F8D" }}>
                 Search
               </a>
             </div>

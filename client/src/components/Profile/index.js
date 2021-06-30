@@ -30,36 +30,6 @@ function Profile() {
     );
   }
 
-
-  //////////////////////////////////////////////////////////////////////
-  //start with empty string once you have API which will call with what we do want and set the state
-  //switch statement 17, 20, 23
-
-  /* import maleImage from '../../images/male.png'
-import femaleImage from '../../images/female.png'
-import nonbinaryImage from '../../images/nonbinary.png' */
-
-  /*   const [userGender, setUserGender] = useState('Male');
-    const [profilePhoto, setProfilePhoto] = useState(nonbinaryImage);
-  
-    useEffect(() => {
-      // Update the document title using the browser API
-      if (userGender === 'Male') {
-        setProfilePhoto(maleImage)
-      }
-      if (userGender === 'Female') {
-        setProfilePhoto(femaleImage)
-      }
-      if (userGender === 'Nonbinary') {
-        setProfilePhoto(nonbinaryImage)
-      }
-  
-    },
-    [userGender]
-  
-    ); */
-  //////////////////////////////////////////////////////////////////////
-
   return (
     <div>
       <div>
