@@ -86,7 +86,7 @@ function Search() {
           </div>
       </div>
       <div class="box">
-        {badRestaurants ? (badRestaurants.filter(rest => searchInput? rest.name.toUpperCase().includes(searchInput.toUpperCase()):true).map(rest => (
+        {badRestaurants.filter(rest => searchInput? rest.name.toUpperCase().includes(searchInput.toUpperCase()):true).map(rest => (
 
           <div class="card">
             <div class="card-image">
@@ -110,7 +110,7 @@ function Search() {
             </div>
 
           </div>
-        ))):{"Loading..."}}
+        ))}
 
       </div>
 

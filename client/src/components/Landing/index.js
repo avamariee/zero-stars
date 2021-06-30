@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
 import starlogo from '../../zerostars2.png';
-import femalelogo from '../../Female Symbol.png';
-import malelogo from '../../Male Symbol.png';
 import reviewone from '../../images/reviewone.png';
 import reviewtwo from '../../images/reviewtwo.png';
 import reviewthree from '../../images/reviewthree.png';
 import Carousel from 'react-bootstrap/Carousel'
 import PostForm from '../PostForm/index'
 import PostDisplay from '../PostDisplay/index';
-
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Search from '../Search'
 import { Link } from 'react-router-dom';
-
-
 
 
 function Landing() {
@@ -38,11 +31,7 @@ function Landing() {
               type="text" 
               placeholder="Find a Resturant"
               onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}
-/*               onKeyPress={event => {
-                if (event.key === 'Enter') {
-                  this.search()
-                }
-              }}  *//>
+              onKeyPress={event => {if (event.key === 'Enter') {this.search()}}} />
             </div>
             <div class="control">
               <a>
