@@ -5,13 +5,19 @@ import { QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 
 
-function Profile() {
+function Profile(props) {
 
   const { username: userParam } = useParams();
 
   const { loading, data } = useQuery(QUERY_ME);
 
   const user = data?.me || data?.user || {};
+
+  const [value, setValue] = useState(props.name);
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
   // redirect to personal profile page if username is the logged-in user's
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
@@ -41,15 +47,24 @@ function Profile() {
             <p className="titlez2">
               {user.username}</p>
             <div className="form-group">
-              <label htmlFor="exampleFormControlTextarea1">
+              <label htmlFor="FormControlTextarea1">
+                About Me:
+              </label>
+            </div>
+            <form id="FormControlTextarea1" method="POST">
+              <textarea id="FormControlTextarea1" className="textarea1" value={value} onChange={handleChange} />
+              <input className="meme" type="submit" value="Save" />
+            </form>
+            {/*             <div className="form-group">
+              <label htmlFor="FormControlTextarea1">
                 About Me:
               </label>
               <textarea
                 className="form-control"
-                id="exampleFormControlTextarea1"
+                id="FormControlTextarea1"
                 rows="5"
               />
-            </div>
+            </div> */}
 
           </div>
         </div>
@@ -112,4 +127,6 @@ function Profile() {
     </div>
   );
 }
+
+
 export default Profile;

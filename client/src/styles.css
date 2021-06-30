@@ -238,6 +238,17 @@ html {
   color: #EFEA5A
 }
 
+.meme {
+  background-color: #EFEA5A;
+  color: #4D9F8D;
+}
+
+.textarea1 {
+    min-height: 15vh; 
+    width: 60vh;
+    height: unset;
+}
+
 /* tess's css */
 
 
