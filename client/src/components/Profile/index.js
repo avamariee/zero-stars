@@ -1,16 +1,28 @@
-  /////// tess code ////////
-  
 import React, { useState, useEffect } from 'react';
-import maleImage from '../../images/male.png'
-import femaleImage from '../../images/female.png'
-import nonbinaryImage from '../../images/nonbinary.png'
-
+import { useParams } from 'react-router-dom';
+import { useQuery, useMutation } from '@apollo/react-hooks';
+import { GET_ME } from '../../utils/queries';
 
 
 function Profile() {
 
+  const { username: userParam } = useParams();
+
+  const { data } = useQuery(userParam ? GET_ME : {
+    variables: { username: userParam }
+  });
+
+  const user = data?.me || data?.user || {};
+
+
+//////////////////////////////////////////////////////////////////////
   //start with empty string once you have API which will call with what we do want and set the state
   //switch statement 17, 20, 23
+
+  /* import maleImage from '../../images/male.png'
+import femaleImage from '../../images/female.png'
+import nonbinaryImage from '../../images/nonbinary.png' */
+
 /*   const [userGender, setUserGender] = useState('Male');
   const [profilePhoto, setProfilePhoto] = useState(nonbinaryImage);
 
@@ -30,8 +42,7 @@ function Profile() {
   [userGender]
 
   ); */
-
-  /////// tess code ////////
+//////////////////////////////////////////////////////////////////////
 
   return (
     <div>
@@ -41,7 +52,7 @@ function Profile() {
             <div className="column"><img src="http://placekitten.com/200/200"></img></div>
           </div>
           <div className="media-content column">
-            <p className="titlez2">Kitty Cat</p>
+            <p className="titlez2">{userParam ? `${user.username}` : 'your'}</p>
             <p className="subtitle">
               Description coming in the future.
             </p>

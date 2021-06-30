@@ -74,7 +74,7 @@ function Search() {
           <a>
             <form onSubmit={handleSubmit}>
               <input class="input" type="text" placeholder="Search Again"
-                onChange={(e) => setBadRestaurants(e.target.value)} value={badRestaurants}></input>
+                onChange={(e) => setSearchInput(e.target.value)} value={searchInput}></input>
               <button type='submit'>submit</button>
             </form>
           </a>
@@ -84,7 +84,7 @@ function Search() {
       <div>
       </div>
       <div class="box">
-        {badRestaurants.map(rest => (
+        {badRestaurants.filter(rest => searchInput? rest.name.toUpperCase().includes(searchInput.toUpperCase()):true).map(rest => (
 
           <div class="card">
             <div class="card-image">
