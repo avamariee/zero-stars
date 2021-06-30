@@ -11,6 +11,7 @@ import PostDisplay from '../PostDisplay/index';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Search from '../Search'
+import { Link } from 'react-router-dom';
 
 
 function Landing() {
@@ -31,9 +32,9 @@ function Landing() {
             </div>
             <div class="control">
               <a class="button"
-              style={{ color: "#EFEA5A", background: "#4D9F8D" }}
-              onChange={<Route exact path='/search' component={Search} />} >
-                Search
+              style={{ color: "#EFEA5A", background: "#4D9F8D" }} >
+                <Link to="/search" className="btn btn-primary">Search</Link>
+                
               </a>
             </div>
           </div>

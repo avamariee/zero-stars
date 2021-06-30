@@ -49,7 +49,7 @@ function Profile(props) {
             <p className="titlez2">
               {user.username}</p>
 
-{/*             <div className="form-group">
+            {/*             <div className="form-group">
               <label htmlFor="FormControlTextarea1">
                 About Me:
               </label>
@@ -64,8 +64,8 @@ function Profile(props) {
               />
               <input className="meme" type="submit" value="Save" />
             </form> */}
-            
-                        <div className="form-group">
+
+            <div className="form-group">
               <label htmlFor="FormControlTextarea1">
                 About Me:
               </label>
@@ -73,6 +73,7 @@ function Profile(props) {
                 className="form-control"
                 id="FormControlTextarea1"
                 rows="5"
+                placeholder= 'Type here...'
               />
             </div>
 
