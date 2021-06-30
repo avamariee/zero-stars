@@ -19,6 +19,8 @@ function Profile(props) {
     setValue(event.target.value);
   };
 
+
+
   // redirect to personal profile page if username is the logged-in user's
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     return <Redirect to="/profile" />;
@@ -46,16 +48,24 @@ function Profile(props) {
           <div className="media-content column">
             <p className="titlez2">
               {user.username}</p>
-            <div className="form-group">
+
+{/*             <div className="form-group">
               <label htmlFor="FormControlTextarea1">
                 About Me:
               </label>
             </div>
             <form id="FormControlTextarea1" method="POST">
-              <textarea id="FormControlTextarea1" className="textarea1" value={value} onChange={handleChange} />
+              <textarea 
+              id="FormControlTextarea1" 
+              className="textarea1" 
+              placeholder= 'Type here...'
+              value={value} 
+              onChange={handleChange} 
+              />
               <input className="meme" type="submit" value="Save" />
-            </form>
-            {/*             <div className="form-group">
+            </form> */}
+            
+                        <div className="form-group">
               <label htmlFor="FormControlTextarea1">
                 About Me:
               </label>
@@ -64,7 +74,7 @@ function Profile(props) {
                 id="FormControlTextarea1"
                 rows="5"
               />
-            </div> */}
+            </div>
 
           </div>
         </div>
