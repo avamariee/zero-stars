@@ -207,8 +207,6 @@ html {
 }
 
 .close{
-
-  /*background-color: red; */
   visibility: hidden;
   position: absolute;
   right: 32px;
@@ -221,10 +219,6 @@ html {
 .button.btn {
   color: rgb(247, 12, 12, 0.5)
 }
-
-/* .logo {
-  background-color: #4D9F8D
-} */
 
 .nav-link {
   background-color: #4D9F8D;
@@ -346,18 +340,6 @@ footer {
 
 }
 
-.containerLanding {
-  width: 100%;
-}
 
-.button {
-background-color: rgba(77, 159, 141, 1);
-/* background-color:#EFEA5A; */
-/* color: #408677; */
-color: #EBEBEB;
-}
 
-.btn-label{
-  color: #EBEBEB;
-}
 

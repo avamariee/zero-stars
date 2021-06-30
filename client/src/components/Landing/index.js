@@ -2,9 +2,9 @@ import React from 'react';
 import starlogo from '../../zerostars2.png';
 import femalelogo from '../../Female Symbol.png';
 import malelogo from '../../Male Symbol.png';
-import fakephoto from '../../fakephoto.png';
-import fakephoto2 from '../../fakephoto2.png';
-import fakephoto3 from '../../fakephoto3.png';
+import reviewone from '../../images/reviewone.png';
+import fakephoto2 from '../../images/reviewtwo.png';
+import fakephoto3 from '../../images/reviewthree.png';
 import Carousel from 'react-bootstrap/Carousel'
 import PostForm from '../PostForm/index'
 import PostDisplay from '../PostDisplay/index';
@@ -44,7 +44,7 @@ function Landing() {
                     <Carousel.Item interval={5000}>
                       <img
                         className="d-block w-100"
-                        src={fakephoto}
+                        src={reviewone}
                         alt="First slide"
                       />
                       <Carousel.Caption>
@@ -55,7 +55,7 @@ function Landing() {
                     <Carousel.Item interval={1000}>
                       <img
                         className="d-block w-100"
-                        src={fakephoto2}
+                        src={reviewtwo}
                         alt="Second slide"
                       />
                       <Carousel.Caption>
@@ -66,7 +66,7 @@ function Landing() {
                     <Carousel.Item>
                       <img
                         className="d-block w-100"
-                        src={fakephoto3}
+                        src={reviewthree}
                         alt="Third slide"
                       />
                       <Carousel.Caption>

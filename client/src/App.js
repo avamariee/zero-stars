@@ -20,8 +20,6 @@ import '././styles.css'
 
 
 
-// import Switch from 'react-bootstrap/esm/Switch';
-
 
 
 const client = new ApolloClient({
