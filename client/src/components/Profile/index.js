@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_ME } from '../../utils/queries';
+import { QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 
 
@@ -9,7 +9,7 @@ function Profile() {
 
   const { username: userParam } = useParams();
 
-  const { loading, data } = useQuery(GET_ME);
+  const { loading, data } = useQuery(QUERY_ME);
 
   const user = data?.me || data?.user || {};
 
