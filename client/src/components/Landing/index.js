@@ -3,8 +3,8 @@ import starlogo from '../../zerostars2.png';
 import femalelogo from '../../Female Symbol.png';
 import malelogo from '../../Male Symbol.png';
 import reviewone from '../../images/reviewone.png';
-import fakephoto2 from '../../images/reviewtwo.png';
-import fakephoto3 from '../../images/reviewthree.png';
+import reviewtwo from '../../images/reviewtwo.png';
+import reviewthree from '../../images/reviewthree.png';
 import Carousel from 'react-bootstrap/Carousel'
 import PostForm from '../PostForm/index'
 import PostDisplay from '../PostDisplay/index';
