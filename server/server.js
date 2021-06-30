@@ -42,7 +42,7 @@ app.get('/asdf', (req, res) => {
 
     +
 
-    'search?term=delis&latitude=37.786882&longitude=-122.3999721',
+    'search?term=mcdonalds&latitude=37.786882&longitude=-122.3999721',
     {
       headers: {
         Authorization: `Bearer ${API_KEY}`,
