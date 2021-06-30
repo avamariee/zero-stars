@@ -4,11 +4,13 @@ import starlogo from '../../zerostars.png';
 import Auth from '../../utils/auth';
 import { searchYelpFoods } from '../../utils/API';
 import { saveFoodIds, getSavedFoodIds } from '../../utils/localStorage';
-
+import { useParams } from 'react-router';
 import { useMutation } from '@apollo/client';
 import { SAVE_FOOD } from '../../utils/mutations';
 
 function Search() {
+
+  const {searchTerm}=useParams();
 
   const getApiStuff = useCallback(
     // track search state in dependency array
@@ -24,7 +26,7 @@ function Search() {
   // yelp API\
   const [badRestaurants, setBadRestaurants] = useState([])
   // create state for holding search field data
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState(searchTerm);
   // create state to hold saved foodId values
   const [savedFoodIds, setSavedFoodIds] = useState(getSavedFoodIds());
 
@@ -84,7 +86,7 @@ function Search() {
           </div>
       </div>
       <div class="box">
-        {badRestaurants.filter(rest => searchInput? rest.name.toUpperCase().includes(searchInput.toUpperCase()):true).map(rest => (
+        {badRestaurants ? (badRestaurants.filter(rest => searchInput? rest.name.toUpperCase().includes(searchInput.toUpperCase()):true).map(rest => (
 
           <div class="card">
             <div class="card-image">
@@ -108,7 +110,7 @@ function Search() {
             </div>
 
           </div>
-        ))}
+        ))):{"Loading..."}}
 
       </div>
 

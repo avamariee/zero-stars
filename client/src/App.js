@@ -45,6 +45,7 @@ function App() {
           <AppNav />
           <Switch>
             <Route exact path='/' component={Landing} />
+            <Route exact path='/search/:searchTerm' component={Search} />
             <Route exact path='/search' component={Search} />
             <Route exact path='/profile' component={Profile} />
             <Route render={() => <h1
