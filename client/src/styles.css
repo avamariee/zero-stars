@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Karla', sans-serif;
+  background-color: #EBEBEB;
 }
 
 .avatar {
@@ -12,8 +13,44 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.title {
+.titlez {
   color: #EFEA5A;
+  font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+    font-family: 'Mr Dafoe', cursive;
+}
+
+.titlez2 {
+  color: #EFEA5A;
+  font-size: 2rem;
+  font-family: 'Barlow', sans-serif;
+
+}
+
+.main-title {
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 50px;
+}
+
+.navbar-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.navbar-brand {
+  padding-bottom: 0px;
+}
+
+.navbar {
+  padding-top: .05rem;
+}
+
+.fa-star {
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 .avatar img {
@@ -30,45 +67,40 @@ body {
 }
 
 ul {
-
-    padding-bottom: 10px;
-    font-weight: bolder;
-    font-size: 25px;
-    margin-right: 50px;
-
+  padding-bottom: 10px;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-right: 50px;
 }
 
 .favorites li:before {
-    content: "🍔";
+  content: "🍔";
 }
-
 
 a:hover {
-    color: #EFEA5A;
+  color: #EFEA5A;
 }
 
-.friends li::before{
-    content: "❤️";
+.friends li::before {
+  content: "❤️";
 }
 
 .favorites, .comments, .friends {
-    text-align: center;
+  text-align: center;
 }
-
 
 .post-title, #user, #birthdate, #gender {
   font-weight: bolder;
 }
 
 .post-title {
-    font-size: 25px;
+  font-size: 25px;
 }
 
- a {
-     text-decoration: none;
-     color: #4a4a4a
- }
-
+a {
+  text-decoration: none;
+  color: #4a4a4a
+}
 
 /* ipad pro */
 
@@ -81,6 +113,12 @@ a:hover {
     margin: auto;
     width: auto;
     height: auto;
+  }
+  .navbar-brand {
+    margin: auto;
+  }
+  .container-fluid {
+    margin: auto;
   }
 }
 
@@ -95,6 +133,17 @@ a:hover {
     margin: auto;
     width: auto;
     height: auto;
+  }
+  .navbar-brand {
+    margin: auto;
+    width: auto;
+    height: auto;
+  }
+  .navbar, .main-title {
+    margin: auto;
+    width: auto;
+    height: auto;
+    font-size: 30px;
   }
 }
 
@@ -111,6 +160,39 @@ html {
 }
 
 
+.close ::before{
+  content: 'X';
+  visibility: visible;
+  color: "black";
+  font-weight: bold;
+}
+
+.sr-only::before{
+  visibility: hidden;
+}
+
+.close{
+  visibility: hidden;
+  position: absolute;
+  right: 32px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(247, 12, 12, 0.5);
+}
+
+.button.btn {
+  color: rgb(247, 12, 12, 0.5)
+}
+
+.nav-link {
+  background-color: #4D9F8D;
+  color: #EBEBEB;
+}
+.nav-link.active {
+  color: #EFEA5A
+}
+
 /* tess's css */
 
 
@@ -124,20 +206,24 @@ footer{
     font-weight:normal;
     text-align: center;
     }
-    .input {
-        text-align: center;
-    }
 
-    .header {
+  .input {
+        text-align: center;
+  }
+
+  .header {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bolder;
-    }
+  }
     
     .landingSearch {
       text-align: center;  
     }
 
 /* search result page*/
+.img.logo {
+  width: 100%;
+}
 
 .box {
   /* display: flex; */
@@ -147,6 +233,7 @@ footer{
   background-color: rgba(77, 159, 141, 1);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* flex-wrap: wrap; */
+  background-color: #EBEBEB;
 }
 
 .card {
@@ -174,7 +261,7 @@ footer{
   display: flex;
   width: 100%;
   height: 350px;
-  justify-content:center;
+  justify-content: center;
 }
 
 

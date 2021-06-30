@@ -4,6 +4,7 @@ import { Form, Button, Alert, Dropdown } from 'react-bootstrap';
 import Auth from '../../utils/auth';
 import { ADD_USER } from '../../utils/mutations';
 import { useMutation } from '@apollo/react-hooks';
+import '../../styles.css'
 
 const SignupForm = () => {
 
@@ -98,7 +99,7 @@ const SignupForm = () => {
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
+{/*         <Form.Group>
           <Form.Label htmlFor='birthday'>Birthday</Form.Label>
           <Form.Control
             type='date'
@@ -122,7 +123,7 @@ const SignupForm = () => {
             required
           />
           <Form.Control.Feedback type='invalid'>Required: gender!</Form.Control.Feedback>
-        </Form.Group>
+        </Form.Group> */}
 
 {/*         {/*         <Form.Group>
         <Form.Label htmlFor='picture'>Picture</Form.Label> <br/>
@@ -169,7 +170,8 @@ const SignupForm = () => {
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
-          variant='outline-warning'>
+          variant='default'
+          style={{ color: "#EFEA5A", background: "#4D9F8D" }}>
           Submit
         </Button>
       </Form>
