@@ -40,9 +40,16 @@ function Profile() {
           <div className="media-content column">
             <p className="titlez2">
               {user.username}</p>
-            <p className="subtitle">
-              Description coming in the future.
-            </p>
+            <div className="form-group">
+              <label htmlFor="exampleFormControlTextarea1">
+                About Me:
+              </label>
+              <textarea
+                className="form-control"
+                id="exampleFormControlTextarea1"
+                rows="5"
+              />
+            </div>
 
           </div>
         </div>

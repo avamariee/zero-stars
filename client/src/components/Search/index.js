@@ -72,7 +72,7 @@ function Search() {
       <div class="boxLanding my-5">
           <div class="field has-addons ">
             <div class="control searchBar is-centered">
-              <input class="input " type="text" placeholder="Find a Resturant"
+              <input class="input " type="text" placeholder="Search Again"
               onChange={(e) => setSearchInput(e.target.value)} value={searchInput}></input>
             </div>
             <div class="control">
@@ -111,15 +111,6 @@ function Search() {
         ))}
 
       </div>
-
-
-
-
-
-
-
-
-
 
     </div>
   )

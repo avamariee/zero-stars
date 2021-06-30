@@ -9,6 +9,9 @@ import Carousel from 'react-bootstrap/Carousel'
 import PostForm from '../PostForm/index'
 import PostDisplay from '../PostDisplay/index';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Search from '../Search'
+
 
 function Landing() {
   return (
@@ -28,7 +31,8 @@ function Landing() {
             </div>
             <div class="control">
               <a class="button"
-              style={{ color: "#EFEA5A", background: "#4D9F8D" }}>
+              style={{ color: "#EFEA5A", background: "#4D9F8D" }}
+              onChange={<Route exact path='/search' component={Search} />} >
                 Search
               </a>
             </div>

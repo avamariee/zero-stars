@@ -51,6 +51,7 @@ function App() {
               style={{ color: "#408677" }}
               className='display-2'>Wrong page!</h1>} />
           </Switch>
+          <Footer></Footer>
         </>
       </Router>
     </ApolloProvider>
