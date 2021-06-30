@@ -10,6 +10,7 @@ import Landing from './components/Landing'
 import Search from './components/Search'
 import Footer from './components/Footer'
 import PostForm from './components/PostForm';
+import PostDisplay from './components/PostDisplay';
 
 import '././styles.css'
 
@@ -69,6 +70,7 @@ function App() {
             <>
               <AppNav />
               <PostForm></PostForm>
+              <PostDisplay></PostDisplay>
               {/* <Switch>
                 <Route exact path='/' component={Landing} />
                 <Route exact path='/search' component={Search} />

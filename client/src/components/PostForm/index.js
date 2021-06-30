@@ -10,7 +10,6 @@ const PostForm = () => {
     const [addPost, { error }] = useMutation(ADD_POST, {
         update(cache, { data: { addPost } }) {
             try {
-                // could potentially not exist yet, so wrap in a try...catch
                 const { posts } = cache.readQuery({ query: QUERY_POSTS });
                 cache.writeQuery({
                     query: QUERY_POSTS,
