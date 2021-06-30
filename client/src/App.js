@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -37,22 +37,21 @@ function App() {
   return (
 
 
-        <ApolloProvider client={client}>
-          <Router>
-            <>
-              <AppNav />
-              {/* <Search></Search> */}
-              <Switch>
-                <Route exact path='/' component={Landing} />
-                <Route exact path='/search' component={Search} />
-                <Route exact path='/profile/:username' component={Profile} />
-                <Route render={() => <h1 
-                style={{ color: "#408677" }}
-                className='display-2'>Wrong page!</h1>} />
-              </Switch>
-            </>
-          </Router>
-        </ApolloProvider>
+    <ApolloProvider client={client}>
+      <Router>
+        <>
+          <AppNav />
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route exact path='/search' component={Search} />
+            <Route exact path='/profile/:username' component={Profile} />
+            <Route render={() => <h1
+              style={{ color: "#408677" }}
+              className='display-2'>Wrong page!</h1>} />
+          </Switch>
+        </>
+      </Router>
+    </ApolloProvider>
 
   );
 }

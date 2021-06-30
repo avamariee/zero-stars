@@ -55,7 +55,7 @@ import nonbinaryImage from '../../images/nonbinary.png' */
           </div>
           <div className="media-content column">
             <p className="titlez2">
-              {userParam ? `${user.username}`: ''}</p>
+              {userParam ? `${user.username}`: 'your'}</p>
             <p className="subtitle">
               Description coming in the future.
             </p>
