@@ -2,6 +2,22 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
 
+type Post {
+    _id: ID
+    postText: String
+    createdAt: String
+    username: String
+    commentCount: Int
+    comments: [Comment]
+}
+
+type Comment {
+    _id: ID
+    commentBody: String
+    createdAt: String
+    username: String
+}
+
 type Restaurant {
     _id: ID
     name: String
@@ -24,8 +40,9 @@ type User {
     _id: ID
     username: String
     email: String
-    #if friends,  friendCount: Int
-    #if friends,  friends: [User]
+    friendCount: Int
+    posts: [Post]
+    friends: [User]
 
 }
 
@@ -33,7 +50,8 @@ type Query {
     me: User
     users: [User]
     user(username: String!): User
-    #favorites?
+    posts(username: String): [Post]
+    post(_id: ID!): Post
     favorites(name: String!): Favorite
     #friends?
 }
@@ -41,9 +59,10 @@ type Query {
 type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    #add favorite, addFavorite(favoriteBody: String!): Favorite
-    #add friend addFriend(friendId: ID!): User
     addFavorite(favoriteBody: String!): Favorite
+    addPost(postText: String!): Post
+    addComment(postId: ID!, commentBody: String!): Post
+    addFriend(friendId: ID!): User
     
 }
 
