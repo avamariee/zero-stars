@@ -16,10 +16,7 @@ import '././styles.css'
 
 // https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.3999721
 
-import Landing from './components/Landing';
-import Footer from './components/Footer';
 
-import Switch from 'react-bootstrap/esm/Switch';
 
 
 
