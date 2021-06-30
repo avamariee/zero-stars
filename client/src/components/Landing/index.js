@@ -31,10 +31,13 @@ function Landing() {
               <input class="input " type="text" placeholder="Find a Resturant" />
             </div>
             <div class="control">
-              <a class="button"
-              style={{ color: "#EFEA5A", background: "#4D9F8D" }} >
-                <Link to="/search" className="btn btn-primary">Search</Link>
-                
+              <a>
+                <Link
+                  to="/search"
+                  className="button"
+                  style={{ color: "#EFEA5A", background: "#4D9F8D" }} >
+                  Search
+                </Link>
               </a>
             </div>
           </div>
@@ -84,11 +87,11 @@ function Landing() {
 
 
                 </div>
-                  <PostForm>
-                  </PostForm>
-                  <PostDisplay>
+                <PostForm>
+                </PostForm>
+                <PostDisplay>
 
-                  </PostDisplay>
+                </PostDisplay>
               </section>
             </div>
           </div>
