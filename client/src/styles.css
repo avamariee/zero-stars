@@ -16,9 +16,9 @@ body {
 .titlez {
   color: #EFEA5A;
   font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.125;
-    font-family: 'Mr Dafoe', cursive;
+  font-weight: 600;
+  line-height: 1.125;
+  font-family: 'Mr Dafoe', cursive;
 }
 
 .titlez2 {
@@ -32,6 +32,7 @@ body {
   font-size: 1rem;
   margin-right: 10px;
 }
+
 .mb-3, .card {
   max-width: 75%;
 }
@@ -49,21 +50,24 @@ body {
 .post-form {
   margin-top: 30px;
   margin-bottom: 30px;
+
 }
 
 .btn {
   background-color: #4D9F8D;
   font-weight: bolder;
 }
+
 .btn:hover {
   background-color: #EFEA5A;
-
 }
+
 textarea {
   resize: none;
   width: 400px;
   height: 100px;
 }
+
 .text-error {
   margin-bottom: 10px;
 }
@@ -194,19 +198,18 @@ html {
   background-color: #4D9F8D;
 }
 
-
-.close ::before{
+.close ::before {
   content: 'X';
   visibility: visible;
   color: "black";
   font-weight: bold;
 }
 
-.sr-only::before{
+.sr-only::before {
   visibility: hidden;
 }
 
-.close{
+.close {
   visibility: hidden;
   position: absolute;
   right: 32px;
@@ -224,6 +227,7 @@ html {
   background-color: #4D9F8D;
   color: #EBEBEB;
 }
+
 .nav-link.active {
   color: #EFEA5A;
 }
@@ -232,35 +236,54 @@ html {
   font-family: 'Barlow', sans-serif;
   text-align: center;
 }
+
+
+.form-group {
+  font-family: 'Barlow', sans-serif;
+  color: #EFEA5A
+}
+
+.meme {
+  background-color: #EFEA5A;
+  color: #4D9F8D;
+}
+
+.textarea1 {
+    min-height: 15vh; 
+    width: 60vh;
+    height: unset;
+}
+
 /* tess's css */
 
+/*luisiannas css */
 
-/*luisiannas css */ 
-footer{
-    position: absolute;
-    bottom: 0;
-    background-color: #EBEBEB;
-    font-family:'Courier New', Courier, monospace;
-    font-size: large;
-    font-weight:normal;
-    text-align: center;
-    }
+/* footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #EBEBEB;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  font-weight: normal;
+  text-align: center;
+} */
 
-  .input {
-        text-align: center;
-        background-color: #EFEA5A;
-  }
+.input {
+  text-align: center;
+  background-color: #EFEA5A;
+}
 
-  .header {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bolder;
-  }
-    
-    .landingSearch {
-      text-align: center;  
-    }
+.header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+
+.landingSearch {
+  text-align: center;
+}
 
 /* search result page*/
+
 .img.logo {
   width: 100%;
 }
@@ -314,15 +337,17 @@ footer{
 
 /* Luisianna*/
 
-footer {
+.footer {
   display: flex;
   /* position: fixed; */
   /* bottom: 0; */
+  position: absolute;
   background-color: rgba(77, 159, 141, 1);
   text-align: center;
   align-content: center;
   justify-content: center;
   align-items: flex-end;
+  width: 100%;
 }
 
 .boxLanding {
@@ -332,7 +357,7 @@ footer {
   justify-content: center;
   align-items: flex-end;
 }
- 
+
 .cardCarousel {
   width: 100%;
   display: flex;
@@ -341,9 +366,32 @@ footer {
   justify-content: center;
   /* align-items: flex-end; */
   /* border: 10px solid rgba(77, 159, 141, 1); */
-
 }
 
+.cardZ {
+  width: auto;
+  display: flex;
+  background-color: #EBEBEB;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 30px;
+  flex-flow: column;
+  flex-wrap: wrap;
+}
 
+.boxZ {
+  display: flex;
+  margin-left: 300px;
+  margin-top: 20px;
+  margin-right: 300px;
+  padding: 30px 30px 5px 30px;
+  background-color: rgba(77, 159, 141, 1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* flex-wrap: wrap; */
+  /* background-color: #EBEBEB;*/
+  flex-direction: column;
+}
 
-
+/* .div.card-content, .p.title, .img {
+  display: flex;
+  flex-wrap:nowrap;
+} */

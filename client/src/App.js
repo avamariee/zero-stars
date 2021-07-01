@@ -43,14 +43,17 @@ function App() {
       <Router>
         <>
           <AppNav />
+          
           <Switch>
             <Route exact path='/' component={Landing} />
+            <Route exact path='/search/:searchTerm' component={Search} />
             <Route exact path='/search' component={Search} />
             <Route exact path='/profile' component={Profile} />
             <Route render={() => <h1
               style={{ color: "#408677" }}
               className='display-2'>Wrong page!</h1>} />
           </Switch>
+          <Footer />
         </>
       </Router>
     </ApolloProvider>

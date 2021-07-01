@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import starlogo from '../../zerostars2.png';
-import femalelogo from '../../Female Symbol.png';
-import malelogo from '../../Male Symbol.png';
 import reviewone from '../../images/reviewone.png';
 import reviewtwo from '../../images/reviewtwo.png';
 import reviewthree from '../../images/reviewthree.png';
 import Carousel from 'react-bootstrap/Carousel'
 import PostForm from '../PostForm/index'
 import PostDisplay from '../PostDisplay/index';
+import { Link } from 'react-router-dom';
 
 
 function Landing() {
+
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <div>
       <hero>
@@ -24,11 +26,21 @@ function Landing() {
         <div class="boxLanding my-5">
           <div class="field has-addons ">
             <div class="control searchBar is-centered">
-              <input class="input " type="text" placeholder="Find a Resturant" />
+              <input
+                class="input "
+                type="text"
+                placeholder="Find a Resturant"
+                onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}
+                />
             </div>
             <div class="control">
-              <a class="button">
-                Search
+              <a>
+                <Link
+                  to={`/search/${searchTerm}`}
+                  className="button"
+                  style={{ color: "#EFEA5A", background: "#4D9F8D" }} >
+                  Search
+                </Link>
               </a>
             </div>
           </div>
@@ -78,11 +90,11 @@ function Landing() {
 
 
                 </div>
-                  <PostForm>
-                  </PostForm>
-                  <PostDisplay>
+                <PostForm>
+                </PostForm>
+                <PostDisplay>
 
-                  </PostDisplay>
+                </PostDisplay>
               </section>
             </div>
           </div>
@@ -96,33 +108,3 @@ function Landing() {
 }
 
 export default Landing;
-
-
-
-// <header className ="section has-text-centered">
-//   <h1 className ="title is-1"> The Best of the Worst!</h1>
-//   <h2 className = "subtitle is-2">★☆☆☆☆</h2>
-// </header>
-
-
-
-
-// <div className = "landingSearch">
-// <div className="field has-addons ">
-//   <div class="columns is-mobile is-centered" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-//     <div className="control searchBar " >
-//       <input className="input" type="text" placeholder="Find a restaurant"  />
-//     </div>
-//     <div className="control">
-//       <a className="button is-info">
-//       Search
-//       </a>
-//     </div>
-//     </div>
-// </div>
-// </div>
-// </div>
-
-
-// );
-// } 
