@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import starlogo from '../../zerostars.png';
 
-import Auth from '../../utils/auth';
-import { searchYelpFoods } from '../../utils/API';
 import { saveFoodIds, getSavedFoodIds } from '../../utils/localStorage';
 import { useParams } from 'react-router';
 import { useMutation } from '@apollo/client';
@@ -10,7 +8,7 @@ import { SAVE_FOOD } from '../../utils/mutations';
 
 function Search() {
 
-  const {searchTerm}=useParams();
+  const { searchTerm } = useParams();
 
   const getApiStuff = useCallback(
     // track search state in dependency array
@@ -57,7 +55,7 @@ function Search() {
 
     if (!searchInput) {
       return false;
-  }
+    }
 
     console.log(`submitted, ${badRestaurants}`);
   }
@@ -72,23 +70,23 @@ function Search() {
       </div>
 
       <div class="boxLanding my-5">
-          <div class="field has-addons ">
-            <div class="control searchBar is-centered">
-              <input class="input " type="text" placeholder="Search Again"
+        <div class="field has-addons ">
+          <div class="control searchBar is-centered">
+            <input class="input " type="text" placeholder="Search Again"
               onChange={(e) => setSearchInput(e.target.value)} value={searchInput}></input>
-            </div>
-            <div class="control">
-              <button class="button"
-              style={{ color: "#EFEA5A", background: "#4D9F8D" }}>
-                Search
-              </button>
-            </div>
           </div>
+          <div class="control">
+            <button class="button"
+              style={{ color: "#EFEA5A", background: "#4D9F8D" }}>
+              Search
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="boxZ">
+      <div class="box">
         {badRestaurants.filter(rest => searchInput? rest.name.toUpperCase().includes(searchInput.toUpperCase()):true).map(rest => (
 
-          <div class="cardZ">
+          <div class="card">
             <div class="card-image">
             </div>
             <div class="card-content">
@@ -104,18 +102,54 @@ function Search() {
               </div>
 
               <div class="content">
-                {rest.reviews.text}
+                <p>{rest.reviews.reviews.map(review => review.text)}</p>
+                
               </div>
-              {/* <div class="ui heart rating" data-rating="1" data-max-rating="3"></div> */}
+              {/* adding another comment so i can commit <div class="ui heart rating" data-rating="1" data-max-rating="3"></div> */}
             </div>
 
           </div>
         ))}
 
+
       </div>
 
     </div>
   )
+}
+
+function showSearchResults(badRestaurants, searchInput) {
+   if (badRestaurants.length > 0) {
+    return <>
+    {(badRestaurants.filter(rest => searchInput ? rest.name.toUpperCase().includes(searchInput.toUpperCase()) : true).map(rest => ( 
+
+      <div class="card">
+        <div class="card-image">
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="https://i.ebayimg.com/thumbs/images/g/KXsAAOSwSJpgAbh2/s-l96.jpg" alt="Placeholder image of a hamburger" />
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4 is-black">{rest.name}</p>
+            </div>
+          </div>
+
+          <div class="content">
+            {rest.reviews.text}
+          </div>
+          {/* <div class="ui heart rating" data-rating="1" data-max-rating="3"></div> */}
+        </div>
+
+      </div>
+       ) ) ) } </>
+   } else {
+     return <div className="loading" >One moment please...</div>
+   }
+  
 }
 
 
