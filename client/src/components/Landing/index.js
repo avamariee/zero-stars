@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import starlogo from '../../zerostars2.png';
+import starlogo from '../../zerostars3.svg';
 import reviewone from '../../images/reviewone.png';
 import reviewtwo from '../../images/reviewtwo.png';
 import reviewthree from '../../images/reviewthree.png';
@@ -8,7 +8,6 @@ import PostForm from '../PostForm/index'
 import PostDisplay from '../PostDisplay/index';
 import { Link } from 'react-router-dom';
 
-,
 
 function Landing() {
 
