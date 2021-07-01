@@ -30,7 +30,7 @@ const PostDisplay = ({ title }) => {
                                         
                                         posted on {post.createdAt}
                                     </p>
-                                    <p>
+                                    <p className="post-text">
                                 {post.postText}
                             </p>
                                </div>
