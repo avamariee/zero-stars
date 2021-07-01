@@ -8,6 +8,7 @@ import PostForm from '../PostForm/index'
 import PostDisplay from '../PostDisplay/index';
 import { Link } from 'react-router-dom';
 
+,
 
 function Landing() {
 
