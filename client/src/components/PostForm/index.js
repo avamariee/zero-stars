@@ -52,35 +52,36 @@ const PostForm = () => {
     };
 
     return (
-        <div className="columns is-centered post-form">
+        <div className="columns is-centered">
+            {/* <div class="card"> */}
+                <form
+                    className="post-form"
+                    onSubmit={handleFormSubmit}
+                >
 
-            <form
-                className="post-form"
-                onSubmit={handleFormSubmit}
-            >
 
-
-                <textarea
-                    placeholder="Type your post here!"
-                    value={postText}
-                    className="form-input"
-                    onChange={handleChange}
-                ></textarea>
-                <div class="columns">
-                    <div class="column">
-                        <button className="btn" type="submit">
-                            Submit
-                        </button>
+                    <textarea
+                        placeholder="Type your post here!"
+                        value={postText}
+                        className="form-input"
+                        onChange={handleChange}
+                    ></textarea>
+                    <div class="columns">
+                        <div class="column">
+                            <button className="btn" type="submit">
+                                Submit
+                            </button>
+                        </div>
+                        <div class="column">
+                            <p className={`${characterCount === 280 || error ? 'text-error' : ''}`}>
+                                Character Count: {characterCount}/280
+                                {error && <span className="bottom-error">Something went wrong...</span>}
+                                {console.log('If theres an error with the post, this is the error: ' + error)}
+                            </p>
+                        </div>
                     </div>
-                    <div class="column">
-                        <p className={`${characterCount === 280 || error ? 'text-error' : ''}`}>
-                            Character Count: {characterCount}/280
-                            {error && <span className="bottom-error">Something went wrong...</span>}
-                            {console.log('If theres an error with the post, this is the error: ' + error)}
-                        </p>
-                    </div>
-                </div>
-            </form>
+                </form>
+            {/* </div> */}
         </div>
     )
 }

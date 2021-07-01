@@ -36,11 +36,12 @@ function Landing() {
               </div>
             </div>
           </div>
+
           <PostForm>
           </PostForm>
           <PostDisplay>
-
           </PostDisplay>
+
         </div>
 
         <div class="column">
