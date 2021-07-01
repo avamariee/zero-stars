@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import starlogo from '../../zerostars.png';
 
-import Auth from '../../utils/auth';
-import { searchYelpFoods } from '../../utils/API';
 import { saveFoodIds, getSavedFoodIds } from '../../utils/localStorage';
-
+import { useParams } from 'react-router';
 import { useMutation } from '@apollo/client';
 import { SAVE_FOOD } from '../../utils/mutations';
 
 function Search() {
+
+  const { searchTerm } = useParams();
 
   const getApiStuff = useCallback(
     // track search state in dependency array
@@ -24,7 +24,7 @@ function Search() {
   // yelp API\
   const [badRestaurants, setBadRestaurants] = useState([])
   // create state for holding search field data
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState(searchTerm);
   // create state to hold saved foodId values
   const [savedFoodIds, setSavedFoodIds] = useState(getSavedFoodIds());
 
@@ -72,19 +72,19 @@ function Search() {
       <div class="boxLanding my-5">
         <div class="field has-addons ">
           <div class="control searchBar is-centered">
-            <input class="input " type="text" placeholder="Find a Resturant"
+            <input class="input " type="text" placeholder="Search Again"
               onChange={(e) => setSearchInput(e.target.value)} value={searchInput}></input>
           </div>
           <div class="control">
             <button class="button"
-            style={{ color: "#EFEA5A", background: "#4D9F8D" }} >
+              style={{ color: "#EFEA5A", background: "#4D9F8D" }}>
               Search
             </button>
           </div>
         </div>
       </div>
       <div class="box">
-        {badRestaurants ? (badRestaurants.filter(rest => searchInput ? rest.name.toUpperCase().includes(searchInput.toUpperCase()) : true).map(rest => (
+        {badRestaurants.filter(rest => searchInput ? rest.name.toUpperCase().includes(searchInput.toUpperCase()) : true).map(rest => (
 
           <div class="card">
             <div class="card-image">
@@ -108,7 +108,7 @@ function Search() {
             </div>
 
           </div>
-        ))) : { "Loading..." : ''}}
+        ))}
 
       </div>
 
