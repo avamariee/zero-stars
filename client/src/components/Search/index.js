@@ -76,8 +76,7 @@ function Search() {
               onChange={(e) => setSearchInput(e.target.value)} value={searchInput}></input>
           </div>
           <div class="control">
-            <button class="button"
-              style={{ color: "#EFEA5A", background: "#4D9F8D" }}>
+            <button class="btn">
               Search
             </button>
           </div>

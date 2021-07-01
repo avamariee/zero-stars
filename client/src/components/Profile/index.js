@@ -58,8 +58,11 @@ function Profile(props) {
                 className="form-control"
                 id="FormControlTextarea1"
                 rows="5"
-                placeholder= 'Type here...'
+                placeholder='Type here...'
               />
+              <button className="btns" type="submit">
+                Submit
+              </button>
             </div>
 
           </div>

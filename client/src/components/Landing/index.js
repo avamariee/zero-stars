@@ -41,8 +41,8 @@ function Landing() {
               <a>
                 <Link
                   to={`/search/${searchTerm}`}
-                  className="button"
-                  style={{ color: "#EFEA5A", background: "#4D9F8D" }} >
+                  className="btn"
+                >
                   Search
                 </Link>
               </a>
