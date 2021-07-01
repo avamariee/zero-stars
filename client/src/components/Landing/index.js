@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import starlogo from '../../zerostars2.png';
-import femalelogo from '../../Female Symbol.png';
-import malelogo from '../../Male Symbol.png';
 import reviewone from '../../images/reviewone.png';
 import reviewtwo from '../../images/reviewtwo.png';
 import reviewthree from '../../images/reviewthree.png';
 import Carousel from 'react-bootstrap/Carousel'
 import PostForm from '../PostForm/index'
 import PostDisplay from '../PostDisplay/index';
+import { Link } from 'react-router-dom';
 
 ,
 
 function Landing() {
+
+  const [searchTerm, setSearchTerm] = useState(''); 
+  
   return (
     <div>
       <hero>
@@ -21,6 +23,7 @@ function Landing() {
           </div>
         </div>
       </hero>
+
 
 
       <div class="columns">
@@ -35,6 +38,7 @@ function Landing() {
                   Search
                 </a>
               </div>
+
             </div>
           </div>
 
@@ -44,6 +48,7 @@ function Landing() {
           </PostDisplay>
 
         </div>
+
 
         <div class="column">
           <div class="cardCarousel">
@@ -85,6 +90,7 @@ function Landing() {
 
                 </section>
               </div>
+
             </div>
           </div>
         </div>

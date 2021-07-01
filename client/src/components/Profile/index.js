@@ -5,13 +5,21 @@ import { QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 
 
-function Profile() {
+function Profile(props) {
 
   const { username: userParam } = useParams();
 
   const { loading, data } = useQuery(QUERY_ME);
 
   const user = data?.me || data?.user || {};
+
+  const [value, setValue] = useState(props.name);
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
+
 
   // redirect to personal profile page if username is the logged-in user's
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
@@ -30,36 +38,6 @@ function Profile() {
     );
   }
 
-
-  //////////////////////////////////////////////////////////////////////
-  //start with empty string once you have API which will call with what we do want and set the state
-  //switch statement 17, 20, 23
-
-  /* import maleImage from '../../images/male.png'
-import femaleImage from '../../images/female.png'
-import nonbinaryImage from '../../images/nonbinary.png' */
-
-  /*   const [userGender, setUserGender] = useState('Male');
-    const [profilePhoto, setProfilePhoto] = useState(nonbinaryImage);
-  
-    useEffect(() => {
-      // Update the document title using the browser API
-      if (userGender === 'Male') {
-        setProfilePhoto(maleImage)
-      }
-      if (userGender === 'Female') {
-        setProfilePhoto(femaleImage)
-      }
-      if (userGender === 'Nonbinary') {
-        setProfilePhoto(nonbinaryImage)
-      }
-  
-    },
-    [userGender]
-  
-    ); */
-  //////////////////////////////////////////////////////////////////////
-
   return (
     <div>
       <div>
@@ -70,9 +48,34 @@ import nonbinaryImage from '../../images/nonbinary.png' */
           <div className="media-content column">
             <p className="titlez2">
               {user.username}</p>
-            <p className="subtitle">
-              Description coming in the future.
-            </p>
+
+            {/*             <div className="form-group">
+              <label htmlFor="FormControlTextarea1">
+                About Me:
+              </label>
+            </div>
+            <form id="FormControlTextarea1" method="POST">
+              <textarea 
+              id="FormControlTextarea1" 
+              className="textarea1" 
+              placeholder= 'Type here...'
+              value={value} 
+              onChange={handleChange} 
+              />
+              <input className="meme" type="submit" value="Save" />
+            </form> */}
+
+            <div className="form-group">
+              <label htmlFor="FormControlTextarea1">
+                About Me:
+              </label>
+              <textarea
+                className="form-control"
+                id="FormControlTextarea1"
+                rows="5"
+                placeholder= 'Type here...'
+              />
+            </div>
 
           </div>
         </div>
@@ -135,4 +138,6 @@ import nonbinaryImage from '../../images/nonbinary.png' */
     </div>
   );
 }
+
+
 export default Profile;
