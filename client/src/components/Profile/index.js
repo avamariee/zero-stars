@@ -77,10 +77,10 @@ function Profile(props) {
             </h2>
             <ul>
               <a href='/'><li>Taco Bell</li></a>
-              <a href='/'><li>Taco Bell</li></a>
-              <a href='/'><li>Taco Bell</li></a>
-              <a href='/'><li>Taco Bell</li></a>
-              <a href='/'><li>Taco Bell</li></a>
+              <a href='/'><li>Subway</li></a>
+              <a href='/'><li>Denny's</li></a>
+              <a href='/'><li>Little Caesars</li></a>
+              <a href='/'><li>Burger King</li></a>
             </ul>
           </div>
 
