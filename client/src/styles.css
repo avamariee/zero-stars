@@ -33,9 +33,18 @@ body {
   margin-right: 10px;
 }
 
+.post-text {
+  font-weight: bolder;
+  margin-top: 30px;
+}
+
+.btn-c {
+  border-color: black;
+}
 .mb-3, .card {
   max-width: 75%;
 }
+
 
 .main-title {
   font-family: 'Mr Dafoe', cursive;

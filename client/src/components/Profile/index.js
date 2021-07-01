@@ -3,7 +3,9 @@ import { Redirect, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
-
+import PostDisplay from '../PostDisplay';
+import CommentList from '../CommentList';
+import Post from '../SinglePost';
 
 function Profile(props) {
 
@@ -22,7 +24,7 @@ function Profile(props) {
 
 
   // redirect to personal profile page if username is the logged-in user's
-
+console.log(user)
   return (
     <div>
       <div>
@@ -81,27 +83,15 @@ function Profile(props) {
         </div>
         <div className="columns avatar is-mobile">
           <div className="column comments">
-
-            <h2 className="titlez2">
-              Posts/Comments
+            <h2 className="titlez2 column">
+              {user.username} 's Posts
+              <br/>
+              <br/>
             </h2>
+            
+           {user.posts?.map(post => <Post post={post} />)}
 
-            <article>
-              <div className="post">
-                <a href="/"></a>
-                <span className="post-title">Test Title</span>
-              </div>
-              <div className="post-text">
-
-                This is the body of the post.
-
-              </div>
-              <div className="post-user">
-                By <span id="user"><a href="/">User</a></span> on
-                <span id="date"> date</span>
-
-              </div>
-            </article>
+            
           </div>
         </div>
 
