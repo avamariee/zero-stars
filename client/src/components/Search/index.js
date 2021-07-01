@@ -121,7 +121,7 @@ function showSearchResults(badRestaurants, searchInput) {
       </div>
        ) ) ) } </>
    } else {
-     return <div>Loading</div>
+     return <div className="loading" >One moment please...</div>
    }
   
 }
