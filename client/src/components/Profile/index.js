@@ -60,8 +60,14 @@ console.log(user)
                 className="form-control"
                 id="FormControlTextarea1"
                 rows="5"
-                placeholder= 'Type here...'
+                placeholder='Type here...'
               />
+              <button className="btn" type="submit">
+                Submit
+              </button>
+              <button className="btn" type="submit">
+                Edit
+              </button>
             </div>
 
           </div>
@@ -73,10 +79,10 @@ console.log(user)
             </h2>
             <ul>
               <a href='/'><li>Taco Bell</li></a>
-              <a href='/'><li>Taco Bell</li></a>
-              <a href='/'><li>Taco Bell</li></a>
-              <a href='/'><li>Taco Bell</li></a>
-              <a href='/'><li>Taco Bell</li></a>
+              <a href='/'><li>Subway</li></a>
+              <a href='/'><li>Denny's</li></a>
+              <a href='/'><li>Little Caesars</li></a>
+              <a href='/'><li>Burger King</li></a>
             </ul>
           </div>
 
@@ -98,7 +104,7 @@ console.log(user)
         <div className="columns avatar is-mobile">
           <div className="column friends">
             <h2 className="titlez2">
-              Extra? Friends List
+              Friends List
             </h2>
             <ul>
               <a href='/'><li>Luisianna</li></a>
