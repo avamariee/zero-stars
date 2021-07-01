@@ -168,6 +168,16 @@ a {
   .container-fluid {
     margin: auto;
   }
+  .posts-column, textarea {
+
+    
+    width: auto;
+   
+  }
+  .post-form, .mb-3 {
+    margin: auto;
+    width: auto;
+  }
 }
 
 /* iphone X */
@@ -193,6 +203,12 @@ a {
     height: auto;
     font-size: 30px;
   }
+}
+
+.burgers {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
 
 /* ava's css */

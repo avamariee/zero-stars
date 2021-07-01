@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import starlogo from '../../zerostars.png';
+import starlogo from '../../zerostars3.svg';
 
 import { saveFoodIds, getSavedFoodIds } from '../../utils/localStorage';
 import { useParams } from 'react-router';
@@ -71,7 +71,7 @@ function Search() {
 
       <div class="boxLanding my-5">
         <div class="field has-addons ">
-          <div class="control searchBar is-centered">
+          <div class="control searchBar">
             <input class="input " type="text" placeholder="Search Again"
               onChange={(e) => setSearchInput(e.target.value)} value={searchInput}></input>
           </div>
@@ -82,10 +82,12 @@ function Search() {
           </div>
         </div>
       </div>
-      <div class="box">
-        {showSearchResults(badRestaurants, searchInput)}
-
-      </div>
+     <div className="columns is-centered">
+        <div class="column">
+          {showSearchResults(badRestaurants, searchInput)}
+  
+        </div>
+     </div>
 
     </div>
   )
@@ -96,10 +98,10 @@ function showSearchResults(badRestaurants, searchInput) {
     return <>
       {(badRestaurants.filter(rest => searchInput ? rest.name.toUpperCase().includes(searchInput.toUpperCase()) : true).map(rest => (
 
-        <div class="card">
+        <div class="card burgers columns is-centered">
           <div class="card-image">
           </div>
-          <div class="card-content">
+          <div class="card-content column is-centered">
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
