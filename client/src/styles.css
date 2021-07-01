@@ -254,6 +254,13 @@ html {
     height: unset;
 }
 
+.loading {
+  font-family: 'Barlow', sans-serif;
+  text-align: center;
+  color: #4D9F8D;
+  font-size: 30px;
+}
+
 /* tess's css */
 
 /*luisiannas css */
