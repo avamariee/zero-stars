@@ -104,7 +104,8 @@ function Search() {
               </div>
 
               <div class="content">
-                {rest.reviews.text}
+                <p>{rest.reviews.reviews.map(review => review.text)}</p>
+                
               </div>
               {/* <div class="ui heart rating" data-rating="1" data-max-rating="3"></div> */}
             </div>
