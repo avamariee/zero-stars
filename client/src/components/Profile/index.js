@@ -60,7 +60,7 @@ function Profile(props) {
                 rows="5"
                 placeholder='Type here...'
               />
-              <button className="btns" type="submit">
+              <button className="btn" type="submit">
                 Submit
               </button>
             </div>
