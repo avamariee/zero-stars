@@ -23,7 +23,7 @@ const PostForm = () => {
             const { me } = cache.readQuery({ query: QUERY_ME });
             cache.writeQuery({
                 query: QUERY_ME,
-                data: { me: { ...me, posts: [...me.posts, addPost ] } }
+                data: { me: { ...me, posts: [...me.posts, addPost] } }
             });
         }
     });
@@ -53,27 +53,32 @@ const PostForm = () => {
 
     return (
         <div className="columns is-centered post-form">
-           
+
             <form
                 className="post-form"
                 onSubmit={handleFormSubmit}
             >
-           
-                <p className={`${characterCount === 280 || error ? 'text-error' : ''}`}>
-                    Character Count: {characterCount}/280
-                    {error && <span className="bottom-error">Something went wrong...</span>}
-                    {console.log('If theres an error with the post, this is the error: ' + error)}
-                </p>
+
+
                 <textarea
                     placeholder="Type your post here!"
                     value={postText}
                     className="form-input"
                     onChange={handleChange}
                 ></textarea>
-                <div>
-                    <button className="btn" type="submit">
-                        Submit
-                    </button>
+                <div class="columns">
+                    <div class="column">
+                        <button className="btn" type="submit">
+                            Submit
+                        </button>
+                    </div>
+                    <div class="column">
+                        <p className={`${characterCount === 280 || error ? 'text-error' : ''}`}>
+                            Character Count: {characterCount}/280
+                            {error && <span className="bottom-error">Something went wrong...</span>}
+                            {console.log('If theres an error with the post, this is the error: ' + error)}
+                        </p>
+                    </div>
                 </div>
             </form>
         </div>
