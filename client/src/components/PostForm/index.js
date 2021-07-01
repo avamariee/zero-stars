@@ -63,7 +63,7 @@ const PostForm = () => {
                     <textarea
                         placeholder="Type your post here!"
                         value={postText}
-                        className="form-input"
+                        className="form-control"
                         onChange={handleChange}
                     ></textarea>
                     <div class="columns">
