@@ -11,8 +11,8 @@ import { Link } from 'react-router-dom';
 
 function Landing() {
 
-  const [searchTerm, setSearchTerm] = useState(''); 
-  
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <div>
       <hero>
@@ -26,11 +26,12 @@ function Landing() {
         <div class="boxLanding my-5">
           <div class="field has-addons ">
             <div class="control searchBar is-centered">
-              <input 
-              class="input " 
-              type="text" 
-              placeholder="Find a Resturant"
-              onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}/>
+              <input
+                class="input "
+                type="text"
+                placeholder="Find a Resturant"
+                onChange={(e) => setSearchTerm(e.target.value)} value={searchTerm}
+                />
             </div>
             <div class="control">
               <a>
