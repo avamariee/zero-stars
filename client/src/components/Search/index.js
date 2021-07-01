@@ -85,10 +85,10 @@ function Search() {
             </div>
           </div>
       </div>
-      <div class="box">
+      <div class="boxZ">
         {badRestaurants.filter(rest => searchInput? rest.name.toUpperCase().includes(searchInput.toUpperCase()):true).map(rest => (
 
-          <div class="card">
+          <div class="cardZ">
             <div class="card-image">
             </div>
             <div class="card-content">
