@@ -9,6 +9,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import PostForm from '../PostForm/index'
 import PostDisplay from '../PostDisplay/index';
 
+,
 
 function Landing() {
   return (
