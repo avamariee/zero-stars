@@ -58,8 +58,14 @@ function Profile(props) {
                 className="form-control"
                 id="FormControlTextarea1"
                 rows="5"
-                placeholder= 'Type here...'
+                placeholder='Type here...'
               />
+              <button className="btn" type="submit">
+                Submit
+              </button>
+              <button className="btn" type="submit">
+                Edit
+              </button>
             </div>
 
           </div>
@@ -108,7 +114,7 @@ function Profile(props) {
         <div className="columns avatar is-mobile">
           <div className="column friends">
             <h2 className="titlez2">
-              Extra? Friends List
+              Friends List
             </h2>
             <ul>
               <a href='/'><li>Luisianna</li></a>
